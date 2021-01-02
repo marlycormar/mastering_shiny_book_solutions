@@ -173,50 +173,9 @@ shinyApp(ui, server)
 
 ### Exercise 3.3.5.2 {-}
 
-Add an additional plot to the right of the existing plot, and size it so that
-each plot takes up half the width of the app.
-
-:::solution
-#### Solution {-}
-
-When creating the layout of a shiny app, you can use the `fluidRow` function to
-control the width of the objects it contains. This function can have columns
-and such columns can be set to have widths ranging from 1-12. Note that columns
-width within a `fluidRow` container should add up to 12.
-
-For our exercise, we need two columns of 50% width each, i.e., we should set
-the width of each column to 6.
+Update the options for renderDataTable() below so that the table is displayed, but nothing else (i.e. remove the search, ordering, and filtering commands). You’ll need to read ?renderDataTable and review the options at https://datatables.net/reference/option/.
 
 ```{r, eval=FALSE}
-library(shiny)
-
-ui <- fluidPage(
-  fluidRow(
-    column(width = 6, plotOutput("plot1")),
-    column(width = 6, plotOutput("plot2"))
-  )
-)
-server <- function(input, output, session) {
-  output$plot1 <- renderPlot(plot(1:5))
-  output$plot2 <- renderPlot(plot(1:5))
-}
-
-shinyApp(ui, server)
-```
-:::
-
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-
-### Exercise 3.3.5.3 {-}
-
-Update the options for `renderDataTable()` below so that the table is
-displayed, but nothing else, i.e. remove the search, ordering, and filtering
-commands. You'll need to read `?renderDataTable` and review the options at
-https://datatables.net/reference/option/.
-
-```{r eval=FALSE}
 ui <- fluidPage(
   dataTableOutput("table")
 )
@@ -247,11 +206,40 @@ shinyApp(ui, server)
 ```
 :::
 
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-
 ### Exercise 3.4.6.1 {-}
+
+Create an app that contains two plots, each of which takes up half the app (regardless of what size the whole app is)
+
+:::solution
+#### Solution {-}
+
+When creating the layout of a shiny app, you can use the `fluidRow` function to
+control the width of the objects it contains. This function can have columns
+and such columns can be set to have widths ranging from 1-12. Note that columns
+width within a `fluidRow` container should add up to 12.
+
+For our exercise, we need two columns of 50% width each, i.e., we should set
+the width of each column to 6.
+
+```{r, eval=FALSE}
+library(shiny)
+
+ui <- fluidPage(
+  fluidRow(
+    column(width = 6, plotOutput("plot1")),
+    column(width = 6, plotOutput("plot2"))
+  )
+)
+server <- function(input, output, session) {
+  output$plot1 <- renderPlot(plot(1:5))
+  output$plot2 <- renderPlot(plot(1:5))
+}
+
+shinyApp(ui, server)
+```
+:::
+
+### Exercise 3.4.6.2 {-}
 
 Modify the Central Limit Theorem app so that the sidebar is on the right
 instead of the left.
@@ -278,11 +266,7 @@ ui <- fluidPage(
 ```
 :::
 
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-
-### Exercise 3.4.6.2 {-}
+### Exercise 3.4.6.3 {-}
 
 Browse the themes available in the shinythemes package, pick an attractive
 theme, and apply it to the Central Limit Theorem app.

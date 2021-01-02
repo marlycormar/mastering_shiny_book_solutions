@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 7 Graphics | Mastering Shiny Solutions</title>
   <meta name="description" content="A solutions manual to Hadley Wickham’s Mastering Shiny." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 7 Graphics | Mastering Shiny Solutions" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,6 @@
   
 <link rel="prev" href="workflow.html"/>
 <link rel="next" href="user-feedback.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,7 +49,8 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102068953-3"></script>
 <script>
@@ -62,28 +62,26 @@
 </script>
 
 
-
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -92,9 +90,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,23 +141,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Mastering Shiny Solutions</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#note-boxes"><i class="fa fa-check"></i>Note Boxes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a>
-<ul>
+<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a><ul>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.1"><i class="fa fa-check"></i>Exercise 2.8.1</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.2"><i class="fa fa-check"></i>Exercise 2.8.2</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.3"><i class="fa fa-check"></i>Exercise 2.8.3</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.4"><i class="fa fa-check"></i>Exercise 2.8.4</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.5"><i class="fa fa-check"></i>Exercise 2.8.5</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a>
-<ul>
+<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.1"><i class="fa fa-check"></i>Exercise 3.2.8.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.2"><i class="fa fa-check"></i>Exercise 3.2.8.2</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.3"><i class="fa fa-check"></i>Exercise 3.2.8.3</a></li>
@@ -167,40 +162,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.5"><i class="fa fa-check"></i>Exercise 3.2.8.5</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.1"><i class="fa fa-check"></i>Exercise 3.3.5.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.2"><i class="fa fa-check"></i>Exercise 3.3.5.2</a></li>
-<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.3"><i class="fa fa-check"></i>Exercise 3.3.5.3</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.1"><i class="fa fa-check"></i>Exercise 3.4.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.2"><i class="fa fa-check"></i>Exercise 3.4.6.2</a></li>
+<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.3"><i class="fa fa-check"></i>Exercise 3.4.6.3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a>
-<ul>
+<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a><ul>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.1"><i class="fa fa-check"></i>Exercise 4.3.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.2"><i class="fa fa-check"></i>Exercise 4.3.6.2</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.4.6.1"><i class="fa fa-check"></i>Exercise 4.4.6.1</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a>
-<ul>
+<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a><ul>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.1"><i class="fa fa-check"></i>Exercise 5.8.1</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.2"><i class="fa fa-check"></i>Exercise 5.8.2</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.3"><i class="fa fa-check"></i>Exercise 5.8.3</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.4"><i class="fa fa-check"></i>Exercise 5.8.4</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>6</b> Workflow</a></li>
-<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a>
-<ul>
+<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a><ul>
 <li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.1"><i class="fa fa-check"></i>Exercise 7.6.1</a></li>
 <li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.2"><i class="fa fa-check"></i>Exercise 7.6.2</a></li>
 <li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.3"><i class="fa fa-check"></i>Exercise 7.6.3</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="user-feedback.html"><a href="user-feedback.html"><i class="fa fa-check"></i><b>8</b> User Feedback</a></li>
-<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a>
-<ul>
+<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a><ul>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.1"><i class="fa fa-check"></i>Exercise 9.4.1</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.2"><i class="fa fa-check"></i>Exercise 9.4.2</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.3"><i class="fa fa-check"></i>Exercise 9.4.3</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.4"><i class="fa fa-check"></i>Exercise 9.4.4</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a>
-<ul>
+<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a><ul>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.1"><i class="fa fa-check"></i>Exercise 10.1.5.1</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.2"><i class="fa fa-check"></i>Exercise 10.1.5.2</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.3"><i class="fa fa-check"></i>Exercise 10.1.5.3</a></li>
@@ -215,21 +205,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.4"><i class="fa fa-check"></i>Exercise 10.3.4.4</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.5"><i class="fa fa-check"></i>Exercise 10.3.4.5</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a>
-<ul>
+<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a><ul>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.1"><i class="fa fa-check"></i>Exercise 11.3.1</a></li>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.2"><i class="fa fa-check"></i>Exercise 11.3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="tidy-evaluation.html"><a href="tidy-evaluation.html"><i class="fa fa-check"></i><b>12</b> Tidy Evaluation</a></li>
 <li class="chapter" data-level="13" data-path="general-guidelines.html"><a href="general-guidelines.html"><i class="fa fa-check"></i><b>13</b> General Guidelines</a></li>
-<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a>
-<ul>
+<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a><ul>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.1"><i class="fa fa-check"></i>Exercise 14.4.1</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.2"><i class="fa fa-check"></i>Exercise 14.4.2</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.3"><i class="fa fa-check"></i>Exercise 14.4.3</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a>
-<ul>
+<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a><ul>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.1"><i class="fa fa-check"></i>Exercise 15.6.1</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.2"><i class="fa fa-check"></i>Exercise 15.6.2</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.3"><i class="fa fa-check"></i>Exercise 15.6.3</a></li>
@@ -263,182 +250,182 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graphics" class="section level1" number="7">
+<div id="graphics" class="section level1">
 <h1><span class="header-section-number">Chapter 7</span> Graphics</h1>
-<div id="exercise-7.6.1" class="section level3 unnumbered" number="">
+<div id="exercise-7.6.1" class="section level3 unnumbered">
 <h3>Exercise 7.6.1</h3>
 <p>Make a plot with click handle that shows all the data returned in the input.</p>
-<div id="solution" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-22" class="unnumbered"><span id="unlabeled-div-23" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>We can use the <code>allRows</code> argument in <code>nearPoints</code> to see the entire data and
 add a boolean column that will be true <code>TRUE</code> for the given point (i.e., row)
 that was clicked.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="graphics.html#cb1-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb1-2"><a href="graphics.html#cb1-2"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="graphics.html#cb1-3"></a></span>
-<span id="cb1-4"><a href="graphics.html#cb1-4"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb1-5"><a href="graphics.html#cb1-5"></a>  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>, <span class="dt">click =</span> <span class="st">&quot;plot_click&quot;</span>),</span>
-<span id="cb1-6"><a href="graphics.html#cb1-6"></a>  <span class="kw">tableOutput</span>(<span class="st">&quot;data&quot;</span>)</span>
-<span id="cb1-7"><a href="graphics.html#cb1-7"></a>)</span>
-<span id="cb1-8"><a href="graphics.html#cb1-8"></a></span>
-<span id="cb1-9"><a href="graphics.html#cb1-9"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb1-10"><a href="graphics.html#cb1-10"></a>  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb1-11"><a href="graphics.html#cb1-11"></a>    <span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(wt, mpg)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span>
-<span id="cb1-12"><a href="graphics.html#cb1-12"></a>  }, <span class="dt">res =</span> <span class="dv">96</span>)</span>
-<span id="cb1-13"><a href="graphics.html#cb1-13"></a>  </span>
-<span id="cb1-14"><a href="graphics.html#cb1-14"></a>  output<span class="op">$</span>data &lt;-<span class="st"> </span><span class="kw">renderTable</span>({</span>
-<span id="cb1-15"><a href="graphics.html#cb1-15"></a>    <span class="kw">nearPoints</span>(mtcars, input<span class="op">$</span>plot_click, <span class="dt">allRows =</span> <span class="ot">TRUE</span>)</span>
-<span id="cb1-16"><a href="graphics.html#cb1-16"></a>  })</span>
-<span id="cb1-17"><a href="graphics.html#cb1-17"></a>}</span>
-<span id="cb1-18"><a href="graphics.html#cb1-18"></a></span>
-<span id="cb1-19"><a href="graphics.html#cb1-19"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb32-2" data-line-number="2"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb32-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb32-4" data-line-number="4">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb32-5" data-line-number="5">  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>, <span class="dt">click =</span> <span class="st">&quot;plot_click&quot;</span>),</a>
+<a class="sourceLine" id="cb32-6" data-line-number="6">  <span class="kw">tableOutput</span>(<span class="st">&quot;data&quot;</span>)</a>
+<a class="sourceLine" id="cb32-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb32-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb32-9" data-line-number="9">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb32-10" data-line-number="10">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb32-11" data-line-number="11">    <span class="kw">ggplot</span>(mtcars, <span class="kw">aes</span>(wt, mpg)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb32-12" data-line-number="12">  }, <span class="dt">res =</span> <span class="dv">96</span>)</a>
+<a class="sourceLine" id="cb32-13" data-line-number="13">  </a>
+<a class="sourceLine" id="cb32-14" data-line-number="14">  output<span class="op">$</span>data &lt;-<span class="st"> </span><span class="kw">renderTable</span>({</a>
+<a class="sourceLine" id="cb32-15" data-line-number="15">    <span class="kw">nearPoints</span>(mtcars, input<span class="op">$</span>plot_click, <span class="dt">allRows =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb32-16" data-line-number="16">  })</a>
+<a class="sourceLine" id="cb32-17" data-line-number="17">}</a>
+<a class="sourceLine" id="cb32-18" data-line-number="18"></a>
+<a class="sourceLine" id="cb32-19" data-line-number="19"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-7.6.2" class="section level3 unnumbered" number="">
+<div id="exercise-7.6.2" class="section level3 unnumbered">
 <h3>Exercise 7.6.2</h3>
 <p>Make a plot with click, dblclick, hover, and brush output handlers and nicely
 display the current selection in the sidebar. Plot the plot in the main panel.</p>
-<div id="solution-1" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-23" class="unnumbered"><span id="unlabeled-div-24" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>We can use the <code>nearPoints</code> function to extract the data from <code>plot_click</code>,
 <code>plot_dbl</code>, and <code>plot_hover</code>. We need to use the function <code>brushedPoints</code> to
 extract the points within the <code>plot_brush</code> area.</p>
 <p>To ‘nicely’ display the current selection, we will use <code>dataTableOutput</code>.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="graphics.html#cb2-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb2-2"><a href="graphics.html#cb2-2"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb2-3"><a href="graphics.html#cb2-3"></a></span>
-<span id="cb2-4"><a href="graphics.html#cb2-4"></a><span class="co"># Set options for rendering DataTables.</span></span>
-<span id="cb2-5"><a href="graphics.html#cb2-5"></a>options &lt;-<span class="st"> </span><span class="kw">list</span>(</span>
-<span id="cb2-6"><a href="graphics.html#cb2-6"></a>  <span class="dt">autoWidth =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb2-7"><a href="graphics.html#cb2-7"></a>  <span class="dt">searching =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb2-8"><a href="graphics.html#cb2-8"></a>  <span class="dt">ordering =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb2-9"><a href="graphics.html#cb2-9"></a>  <span class="dt">lengthChange =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb2-10"><a href="graphics.html#cb2-10"></a>  <span class="dt">lengthMenu =</span> <span class="ot">FALSE</span>,</span>
-<span id="cb2-11"><a href="graphics.html#cb2-11"></a>  <span class="dt">pageLength =</span> <span class="dv">5</span>, <span class="co"># Only show 5 rows per page.</span></span>
-<span id="cb2-12"><a href="graphics.html#cb2-12"></a>  <span class="dt">paging =</span> <span class="ot">TRUE</span>, <span class="co"># Enable pagination. Must be set for pageLength to work.</span></span>
-<span id="cb2-13"><a href="graphics.html#cb2-13"></a>  <span class="dt">info =</span> <span class="ot">FALSE</span></span>
-<span id="cb2-14"><a href="graphics.html#cb2-14"></a>)</span>
-<span id="cb2-15"><a href="graphics.html#cb2-15"></a></span>
-<span id="cb2-16"><a href="graphics.html#cb2-16"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb2-17"><a href="graphics.html#cb2-17"></a>  </span>
-<span id="cb2-18"><a href="graphics.html#cb2-18"></a>  <span class="kw">sidebarLayout</span>(</span>
-<span id="cb2-19"><a href="graphics.html#cb2-19"></a>    <span class="kw">sidebarPanel</span>(</span>
-<span id="cb2-20"><a href="graphics.html#cb2-20"></a>      <span class="dt">width =</span> <span class="dv">6</span>,</span>
-<span id="cb2-21"><a href="graphics.html#cb2-21"></a>      </span>
-<span id="cb2-22"><a href="graphics.html#cb2-22"></a>      <span class="kw">h4</span>(<span class="st">&quot;Selected Points&quot;</span>),</span>
-<span id="cb2-23"><a href="graphics.html#cb2-23"></a>      <span class="kw">dataTableOutput</span>(<span class="st">&quot;click&quot;</span>), <span class="kw">br</span>(),</span>
-<span id="cb2-24"><a href="graphics.html#cb2-24"></a></span>
-<span id="cb2-25"><a href="graphics.html#cb2-25"></a>      <span class="kw">h4</span>(<span class="st">&quot;Double Clicked Points&quot;</span>),</span>
-<span id="cb2-26"><a href="graphics.html#cb2-26"></a>      <span class="kw">dataTableOutput</span>(<span class="st">&quot;dbl&quot;</span>), <span class="kw">br</span>(),</span>
-<span id="cb2-27"><a href="graphics.html#cb2-27"></a>      </span>
-<span id="cb2-28"><a href="graphics.html#cb2-28"></a>      <span class="kw">h4</span>(<span class="st">&quot;Hovered Points&quot;</span>),</span>
-<span id="cb2-29"><a href="graphics.html#cb2-29"></a>      <span class="kw">dataTableOutput</span>(<span class="st">&quot;hover&quot;</span>), <span class="kw">br</span>(),</span>
-<span id="cb2-30"><a href="graphics.html#cb2-30"></a>      </span>
-<span id="cb2-31"><a href="graphics.html#cb2-31"></a>      <span class="kw">h4</span>(<span class="st">&quot;Brushed Points&quot;</span>),</span>
-<span id="cb2-32"><a href="graphics.html#cb2-32"></a>      <span class="kw">dataTableOutput</span>(<span class="st">&quot;brush&quot;</span>)</span>
-<span id="cb2-33"><a href="graphics.html#cb2-33"></a>    ),</span>
-<span id="cb2-34"><a href="graphics.html#cb2-34"></a>    </span>
-<span id="cb2-35"><a href="graphics.html#cb2-35"></a>    <span class="kw">mainPanel</span>(<span class="dt">width =</span> <span class="dv">6</span>,</span>
-<span id="cb2-36"><a href="graphics.html#cb2-36"></a>              <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>,</span>
-<span id="cb2-37"><a href="graphics.html#cb2-37"></a>                         <span class="dt">click =</span> <span class="st">&quot;plot_click&quot;</span>,</span>
-<span id="cb2-38"><a href="graphics.html#cb2-38"></a>                         <span class="dt">dblclick =</span> <span class="st">&quot;plot_dbl&quot;</span>,</span>
-<span id="cb2-39"><a href="graphics.html#cb2-39"></a>                         <span class="dt">hover =</span> <span class="st">&quot;plot_hover&quot;</span>,</span>
-<span id="cb2-40"><a href="graphics.html#cb2-40"></a>                         <span class="dt">brush =</span> <span class="st">&quot;plot_brush&quot;</span>)</span>
-<span id="cb2-41"><a href="graphics.html#cb2-41"></a>    )</span>
-<span id="cb2-42"><a href="graphics.html#cb2-42"></a>  )</span>
-<span id="cb2-43"><a href="graphics.html#cb2-43"></a>)</span>
-<span id="cb2-44"><a href="graphics.html#cb2-44"></a></span>
-<span id="cb2-45"><a href="graphics.html#cb2-45"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb2-46"><a href="graphics.html#cb2-46"></a>  </span>
-<span id="cb2-47"><a href="graphics.html#cb2-47"></a>  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb2-48"><a href="graphics.html#cb2-48"></a>    <span class="kw">ggplot</span>(iris, <span class="kw">aes</span>(Sepal.Length, Sepal.Width)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</span>
-<span id="cb2-49"><a href="graphics.html#cb2-49"></a>  }, <span class="dt">res =</span> <span class="dv">96</span>)</span>
-<span id="cb2-50"><a href="graphics.html#cb2-50"></a>  </span>
-<span id="cb2-51"><a href="graphics.html#cb2-51"></a>  output<span class="op">$</span>click &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</span>
-<span id="cb2-52"><a href="graphics.html#cb2-52"></a>    <span class="kw">nearPoints</span>(iris, input<span class="op">$</span>plot_click),</span>
-<span id="cb2-53"><a href="graphics.html#cb2-53"></a>    <span class="dt">options =</span> options)</span>
-<span id="cb2-54"><a href="graphics.html#cb2-54"></a>  </span>
-<span id="cb2-55"><a href="graphics.html#cb2-55"></a>  output<span class="op">$</span>hover &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</span>
-<span id="cb2-56"><a href="graphics.html#cb2-56"></a>    <span class="kw">nearPoints</span>(iris, input<span class="op">$</span>plot_hover),</span>
-<span id="cb2-57"><a href="graphics.html#cb2-57"></a>    <span class="dt">options =</span> options)</span>
-<span id="cb2-58"><a href="graphics.html#cb2-58"></a>  </span>
-<span id="cb2-59"><a href="graphics.html#cb2-59"></a>  output<span class="op">$</span>dbl &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</span>
-<span id="cb2-60"><a href="graphics.html#cb2-60"></a>    <span class="kw">nearPoints</span>(iris, input<span class="op">$</span>plot_dbl),</span>
-<span id="cb2-61"><a href="graphics.html#cb2-61"></a>    <span class="dt">options =</span> options)</span>
-<span id="cb2-62"><a href="graphics.html#cb2-62"></a>  </span>
-<span id="cb2-63"><a href="graphics.html#cb2-63"></a>  output<span class="op">$</span>brush &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</span>
-<span id="cb2-64"><a href="graphics.html#cb2-64"></a>    <span class="kw">brushedPoints</span>(iris, input<span class="op">$</span>plot_brush),</span>
-<span id="cb2-65"><a href="graphics.html#cb2-65"></a>    <span class="dt">options =</span> options)</span>
-<span id="cb2-66"><a href="graphics.html#cb2-66"></a>}</span>
-<span id="cb2-67"><a href="graphics.html#cb2-67"></a></span>
-<span id="cb2-68"><a href="graphics.html#cb2-68"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb33-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb33-2" data-line-number="2"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb33-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb33-4" data-line-number="4"><span class="co"># Set options for rendering DataTables.</span></a>
+<a class="sourceLine" id="cb33-5" data-line-number="5">options &lt;-<span class="st"> </span><span class="kw">list</span>(</a>
+<a class="sourceLine" id="cb33-6" data-line-number="6">  <span class="dt">autoWidth =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb33-7" data-line-number="7">  <span class="dt">searching =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb33-8" data-line-number="8">  <span class="dt">ordering =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb33-9" data-line-number="9">  <span class="dt">lengthChange =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb33-10" data-line-number="10">  <span class="dt">lengthMenu =</span> <span class="ot">FALSE</span>,</a>
+<a class="sourceLine" id="cb33-11" data-line-number="11">  <span class="dt">pageLength =</span> <span class="dv">5</span>, <span class="co"># Only show 5 rows per page.</span></a>
+<a class="sourceLine" id="cb33-12" data-line-number="12">  <span class="dt">paging =</span> <span class="ot">TRUE</span>, <span class="co"># Enable pagination. Must be set for pageLength to work.</span></a>
+<a class="sourceLine" id="cb33-13" data-line-number="13">  <span class="dt">info =</span> <span class="ot">FALSE</span></a>
+<a class="sourceLine" id="cb33-14" data-line-number="14">)</a>
+<a class="sourceLine" id="cb33-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb33-16" data-line-number="16">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb33-17" data-line-number="17">  </a>
+<a class="sourceLine" id="cb33-18" data-line-number="18">  <span class="kw">sidebarLayout</span>(</a>
+<a class="sourceLine" id="cb33-19" data-line-number="19">    <span class="kw">sidebarPanel</span>(</a>
+<a class="sourceLine" id="cb33-20" data-line-number="20">      <span class="dt">width =</span> <span class="dv">6</span>,</a>
+<a class="sourceLine" id="cb33-21" data-line-number="21">      </a>
+<a class="sourceLine" id="cb33-22" data-line-number="22">      <span class="kw">h4</span>(<span class="st">&quot;Selected Points&quot;</span>),</a>
+<a class="sourceLine" id="cb33-23" data-line-number="23">      <span class="kw">dataTableOutput</span>(<span class="st">&quot;click&quot;</span>), <span class="kw">br</span>(),</a>
+<a class="sourceLine" id="cb33-24" data-line-number="24"></a>
+<a class="sourceLine" id="cb33-25" data-line-number="25">      <span class="kw">h4</span>(<span class="st">&quot;Double Clicked Points&quot;</span>),</a>
+<a class="sourceLine" id="cb33-26" data-line-number="26">      <span class="kw">dataTableOutput</span>(<span class="st">&quot;dbl&quot;</span>), <span class="kw">br</span>(),</a>
+<a class="sourceLine" id="cb33-27" data-line-number="27">      </a>
+<a class="sourceLine" id="cb33-28" data-line-number="28">      <span class="kw">h4</span>(<span class="st">&quot;Hovered Points&quot;</span>),</a>
+<a class="sourceLine" id="cb33-29" data-line-number="29">      <span class="kw">dataTableOutput</span>(<span class="st">&quot;hover&quot;</span>), <span class="kw">br</span>(),</a>
+<a class="sourceLine" id="cb33-30" data-line-number="30">      </a>
+<a class="sourceLine" id="cb33-31" data-line-number="31">      <span class="kw">h4</span>(<span class="st">&quot;Brushed Points&quot;</span>),</a>
+<a class="sourceLine" id="cb33-32" data-line-number="32">      <span class="kw">dataTableOutput</span>(<span class="st">&quot;brush&quot;</span>)</a>
+<a class="sourceLine" id="cb33-33" data-line-number="33">    ),</a>
+<a class="sourceLine" id="cb33-34" data-line-number="34">    </a>
+<a class="sourceLine" id="cb33-35" data-line-number="35">    <span class="kw">mainPanel</span>(<span class="dt">width =</span> <span class="dv">6</span>,</a>
+<a class="sourceLine" id="cb33-36" data-line-number="36">              <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>,</a>
+<a class="sourceLine" id="cb33-37" data-line-number="37">                         <span class="dt">click =</span> <span class="st">&quot;plot_click&quot;</span>,</a>
+<a class="sourceLine" id="cb33-38" data-line-number="38">                         <span class="dt">dblclick =</span> <span class="st">&quot;plot_dbl&quot;</span>,</a>
+<a class="sourceLine" id="cb33-39" data-line-number="39">                         <span class="dt">hover =</span> <span class="st">&quot;plot_hover&quot;</span>,</a>
+<a class="sourceLine" id="cb33-40" data-line-number="40">                         <span class="dt">brush =</span> <span class="st">&quot;plot_brush&quot;</span>)</a>
+<a class="sourceLine" id="cb33-41" data-line-number="41">    )</a>
+<a class="sourceLine" id="cb33-42" data-line-number="42">  )</a>
+<a class="sourceLine" id="cb33-43" data-line-number="43">)</a>
+<a class="sourceLine" id="cb33-44" data-line-number="44"></a>
+<a class="sourceLine" id="cb33-45" data-line-number="45">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb33-46" data-line-number="46">  </a>
+<a class="sourceLine" id="cb33-47" data-line-number="47">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb33-48" data-line-number="48">    <span class="kw">ggplot</span>(iris, <span class="kw">aes</span>(Sepal.Length, Sepal.Width)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb33-49" data-line-number="49">  }, <span class="dt">res =</span> <span class="dv">96</span>)</a>
+<a class="sourceLine" id="cb33-50" data-line-number="50">  </a>
+<a class="sourceLine" id="cb33-51" data-line-number="51">  output<span class="op">$</span>click &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</a>
+<a class="sourceLine" id="cb33-52" data-line-number="52">    <span class="kw">nearPoints</span>(iris, input<span class="op">$</span>plot_click),</a>
+<a class="sourceLine" id="cb33-53" data-line-number="53">    <span class="dt">options =</span> options)</a>
+<a class="sourceLine" id="cb33-54" data-line-number="54">  </a>
+<a class="sourceLine" id="cb33-55" data-line-number="55">  output<span class="op">$</span>hover &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</a>
+<a class="sourceLine" id="cb33-56" data-line-number="56">    <span class="kw">nearPoints</span>(iris, input<span class="op">$</span>plot_hover),</a>
+<a class="sourceLine" id="cb33-57" data-line-number="57">    <span class="dt">options =</span> options)</a>
+<a class="sourceLine" id="cb33-58" data-line-number="58">  </a>
+<a class="sourceLine" id="cb33-59" data-line-number="59">  output<span class="op">$</span>dbl &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</a>
+<a class="sourceLine" id="cb33-60" data-line-number="60">    <span class="kw">nearPoints</span>(iris, input<span class="op">$</span>plot_dbl),</a>
+<a class="sourceLine" id="cb33-61" data-line-number="61">    <span class="dt">options =</span> options)</a>
+<a class="sourceLine" id="cb33-62" data-line-number="62">  </a>
+<a class="sourceLine" id="cb33-63" data-line-number="63">  output<span class="op">$</span>brush &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</a>
+<a class="sourceLine" id="cb33-64" data-line-number="64">    <span class="kw">brushedPoints</span>(iris, input<span class="op">$</span>plot_brush),</a>
+<a class="sourceLine" id="cb33-65" data-line-number="65">    <span class="dt">options =</span> options)</a>
+<a class="sourceLine" id="cb33-66" data-line-number="66">}</a>
+<a class="sourceLine" id="cb33-67" data-line-number="67"></a>
+<a class="sourceLine" id="cb33-68" data-line-number="68"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-7.6.3" class="section level3 unnumbered" number="">
+<div id="exercise-7.6.3" class="section level3 unnumbered">
 <h3>Exercise 7.6.3</h3>
 <p>Compute the limits of the distance scale using the size of the plot.</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="graphics.html#cb3-1"></a>output_size &lt;-<span class="st"> </span><span class="cf">function</span>(id) {</span>
-<span id="cb3-2"><a href="graphics.html#cb3-2"></a>  <span class="kw">reactive</span>(<span class="kw">c</span>(</span>
-<span id="cb3-3"><a href="graphics.html#cb3-3"></a>    session<span class="op">$</span>clientData[[<span class="kw">paste0</span>(<span class="st">&quot;output_&quot;</span>, id, <span class="st">&quot;_width&quot;</span>)]],</span>
-<span id="cb3-4"><a href="graphics.html#cb3-4"></a>    session<span class="op">$</span>clientData[[<span class="kw">paste0</span>(<span class="st">&quot;output_&quot;</span>, id, <span class="st">&quot;_height&quot;</span>)]]</span>
-<span id="cb3-5"><a href="graphics.html#cb3-5"></a>  ))</span>
-<span id="cb3-6"><a href="graphics.html#cb3-6"></a>}</span></code></pre></div>
-<div id="solution-2" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" data-line-number="1">output_size &lt;-<span class="st"> </span><span class="cf">function</span>(id) {</a>
+<a class="sourceLine" id="cb34-2" data-line-number="2">  <span class="kw">reactive</span>(<span class="kw">c</span>(</a>
+<a class="sourceLine" id="cb34-3" data-line-number="3">    session<span class="op">$</span>clientData[[<span class="kw">paste0</span>(<span class="st">&quot;output_&quot;</span>, id, <span class="st">&quot;_width&quot;</span>)]],</a>
+<a class="sourceLine" id="cb34-4" data-line-number="4">    session<span class="op">$</span>clientData[[<span class="kw">paste0</span>(<span class="st">&quot;output_&quot;</span>, id, <span class="st">&quot;_height&quot;</span>)]]</a>
+<a class="sourceLine" id="cb34-5" data-line-number="5">  ))</a>
+<a class="sourceLine" id="cb34-6" data-line-number="6">}</a></code></pre></div>
+<div class="solution">
+<h4 id="solution-24" class="unnumbered"><span id="unlabeled-div-25" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>Let us use the plot’s width and height to estimate the scale limits for our
 plot.</p>
 <p>To verify that the recommended limits are correct, click around the plot
 and watch how the distance scale changes on the legend. These values should
 oscillate between the recommended limits.</p>
 <p>Resize the browser’s window to change the width and height reactives.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="graphics.html#cb4-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb4-2"><a href="graphics.html#cb4-2"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb4-3"><a href="graphics.html#cb4-3"></a></span>
-<span id="cb4-4"><a href="graphics.html#cb4-4"></a>df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>), <span class="dt">y =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>))</span>
-<span id="cb4-5"><a href="graphics.html#cb4-5"></a></span>
-<span id="cb4-6"><a href="graphics.html#cb4-6"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb4-7"><a href="graphics.html#cb4-7"></a>  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>, <span class="dt">click =</span> <span class="st">&quot;plot_click&quot;</span>),</span>
-<span id="cb4-8"><a href="graphics.html#cb4-8"></a>  <span class="kw">textOutput</span>(<span class="st">&quot;width&quot;</span>),</span>
-<span id="cb4-9"><a href="graphics.html#cb4-9"></a>  <span class="kw">textOutput</span>(<span class="st">&quot;height&quot;</span>),</span>
-<span id="cb4-10"><a href="graphics.html#cb4-10"></a>  <span class="kw">textOutput</span>(<span class="st">&quot;scale&quot;</span>)</span>
-<span id="cb4-11"><a href="graphics.html#cb4-11"></a>)</span>
-<span id="cb4-12"><a href="graphics.html#cb4-12"></a></span>
-<span id="cb4-13"><a href="graphics.html#cb4-13"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb4-14"><a href="graphics.html#cb4-14"></a>  </span>
-<span id="cb4-15"><a href="graphics.html#cb4-15"></a>  <span class="co"># Save the plot&#39;s widht and height.</span></span>
-<span id="cb4-16"><a href="graphics.html#cb4-16"></a>  width &lt;-<span class="st"> </span><span class="kw">reactive</span>(session<span class="op">$</span>clientData[[<span class="st">&quot;output_plot_width&quot;</span>]])</span>
-<span id="cb4-17"><a href="graphics.html#cb4-17"></a>  height &lt;-<span class="st"> </span><span class="kw">reactive</span>(session<span class="op">$</span>clientData[[<span class="st">&quot;output_plot_height&quot;</span>]])</span>
-<span id="cb4-18"><a href="graphics.html#cb4-18"></a>  </span>
-<span id="cb4-19"><a href="graphics.html#cb4-19"></a>  <span class="co"># Print the plot&#39;s width, the plot&#39;s height, and the suggested scale limits.</span></span>
-<span id="cb4-20"><a href="graphics.html#cb4-20"></a>  output<span class="op">$</span>width &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">paste0</span>(<span class="st">&quot;Plot&#39;s width: &quot;</span>, <span class="kw">width</span>()))</span>
-<span id="cb4-21"><a href="graphics.html#cb4-21"></a>  output<span class="op">$</span>height &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">paste0</span>(<span class="st">&quot;Plot&#39;s height: &quot;</span>, <span class="kw">height</span>()))</span>
-<span id="cb4-22"><a href="graphics.html#cb4-22"></a>  output<span class="op">$</span>scale &lt;-<span class="st"> </span><span class="kw">renderText</span>({</span>
-<span id="cb4-23"><a href="graphics.html#cb4-23"></a>    <span class="kw">paste0</span>(<span class="st">&quot;Recommended limits: (0, &quot;</span>, <span class="kw">max</span>(<span class="kw">height</span>(), <span class="kw">width</span>()), <span class="st">&quot;)&quot;</span>)</span>
-<span id="cb4-24"><a href="graphics.html#cb4-24"></a>  })</span>
-<span id="cb4-25"><a href="graphics.html#cb4-25"></a>  </span>
-<span id="cb4-26"><a href="graphics.html#cb4-26"></a>  <span class="co"># Store the distance computed by the click event.</span></span>
-<span id="cb4-27"><a href="graphics.html#cb4-27"></a>  dist &lt;-<span class="st"> </span><span class="kw">reactiveVal</span>(<span class="kw">rep</span>(<span class="dv">1</span>, <span class="kw">nrow</span>(df)))</span>
-<span id="cb4-28"><a href="graphics.html#cb4-28"></a>  </span>
-<span id="cb4-29"><a href="graphics.html#cb4-29"></a>  <span class="co"># Update the dist reactive as needed.</span></span>
-<span id="cb4-30"><a href="graphics.html#cb4-30"></a>  <span class="kw">observeEvent</span>(input<span class="op">$</span>plot_click, {</span>
-<span id="cb4-31"><a href="graphics.html#cb4-31"></a>    <span class="kw">req</span>(input<span class="op">$</span>plot_click)</span>
-<span id="cb4-32"><a href="graphics.html#cb4-32"></a>    <span class="kw">dist</span>(<span class="kw">nearPoints</span>(df, input<span class="op">$</span>plot_click, <span class="dt">allRows =</span> <span class="ot">TRUE</span>, <span class="dt">addDist =</span> <span class="ot">TRUE</span>)<span class="op">$</span>dist_)</span>
-<span id="cb4-33"><a href="graphics.html#cb4-33"></a>  })</span>
-<span id="cb4-34"><a href="graphics.html#cb4-34"></a>  </span>
-<span id="cb4-35"><a href="graphics.html#cb4-35"></a>  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb4-36"><a href="graphics.html#cb4-36"></a>    df<span class="op">$</span>dist &lt;-<span class="st"> </span><span class="kw">dist</span>()</span>
-<span id="cb4-37"><a href="graphics.html#cb4-37"></a>    <span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x, y, <span class="dt">size =</span> dist)) <span class="op">+</span></span>
-<span id="cb4-38"><a href="graphics.html#cb4-38"></a><span class="st">      </span><span class="kw">geom_point</span>()</span>
-<span id="cb4-39"><a href="graphics.html#cb4-39"></a>  })</span>
-<span id="cb4-40"><a href="graphics.html#cb4-40"></a>}</span>
-<span id="cb4-41"><a href="graphics.html#cb4-41"></a></span>
-<span id="cb4-42"><a href="graphics.html#cb4-42"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb35-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb35-2" data-line-number="2"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb35-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb35-4" data-line-number="4">df &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">x =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>), <span class="dt">y =</span> <span class="kw">rnorm</span>(<span class="dv">100</span>))</a>
+<a class="sourceLine" id="cb35-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb35-6" data-line-number="6">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb35-7" data-line-number="7">  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>, <span class="dt">click =</span> <span class="st">&quot;plot_click&quot;</span>),</a>
+<a class="sourceLine" id="cb35-8" data-line-number="8">  <span class="kw">textOutput</span>(<span class="st">&quot;width&quot;</span>),</a>
+<a class="sourceLine" id="cb35-9" data-line-number="9">  <span class="kw">textOutput</span>(<span class="st">&quot;height&quot;</span>),</a>
+<a class="sourceLine" id="cb35-10" data-line-number="10">  <span class="kw">textOutput</span>(<span class="st">&quot;scale&quot;</span>)</a>
+<a class="sourceLine" id="cb35-11" data-line-number="11">)</a>
+<a class="sourceLine" id="cb35-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb35-13" data-line-number="13">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb35-14" data-line-number="14">  </a>
+<a class="sourceLine" id="cb35-15" data-line-number="15">  <span class="co"># Save the plot&#39;s widht and height.</span></a>
+<a class="sourceLine" id="cb35-16" data-line-number="16">  width &lt;-<span class="st"> </span><span class="kw">reactive</span>(session<span class="op">$</span>clientData[[<span class="st">&quot;output_plot_width&quot;</span>]])</a>
+<a class="sourceLine" id="cb35-17" data-line-number="17">  height &lt;-<span class="st"> </span><span class="kw">reactive</span>(session<span class="op">$</span>clientData[[<span class="st">&quot;output_plot_height&quot;</span>]])</a>
+<a class="sourceLine" id="cb35-18" data-line-number="18">  </a>
+<a class="sourceLine" id="cb35-19" data-line-number="19">  <span class="co"># Print the plot&#39;s width, the plot&#39;s height, and the suggested scale limits.</span></a>
+<a class="sourceLine" id="cb35-20" data-line-number="20">  output<span class="op">$</span>width &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">paste0</span>(<span class="st">&quot;Plot&#39;s width: &quot;</span>, <span class="kw">width</span>()))</a>
+<a class="sourceLine" id="cb35-21" data-line-number="21">  output<span class="op">$</span>height &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">paste0</span>(<span class="st">&quot;Plot&#39;s height: &quot;</span>, <span class="kw">height</span>()))</a>
+<a class="sourceLine" id="cb35-22" data-line-number="22">  output<span class="op">$</span>scale &lt;-<span class="st"> </span><span class="kw">renderText</span>({</a>
+<a class="sourceLine" id="cb35-23" data-line-number="23">    <span class="kw">paste0</span>(<span class="st">&quot;Recommended limits: (0, &quot;</span>, <span class="kw">max</span>(<span class="kw">height</span>(), <span class="kw">width</span>()), <span class="st">&quot;)&quot;</span>)</a>
+<a class="sourceLine" id="cb35-24" data-line-number="24">  })</a>
+<a class="sourceLine" id="cb35-25" data-line-number="25">  </a>
+<a class="sourceLine" id="cb35-26" data-line-number="26">  <span class="co"># Store the distance computed by the click event.</span></a>
+<a class="sourceLine" id="cb35-27" data-line-number="27">  dist &lt;-<span class="st"> </span><span class="kw">reactiveVal</span>(<span class="kw">rep</span>(<span class="dv">1</span>, <span class="kw">nrow</span>(df)))</a>
+<a class="sourceLine" id="cb35-28" data-line-number="28">  </a>
+<a class="sourceLine" id="cb35-29" data-line-number="29">  <span class="co"># Update the dist reactive as needed.</span></a>
+<a class="sourceLine" id="cb35-30" data-line-number="30">  <span class="kw">observeEvent</span>(input<span class="op">$</span>plot_click, {</a>
+<a class="sourceLine" id="cb35-31" data-line-number="31">    <span class="kw">req</span>(input<span class="op">$</span>plot_click)</a>
+<a class="sourceLine" id="cb35-32" data-line-number="32">    <span class="kw">dist</span>(<span class="kw">nearPoints</span>(df, input<span class="op">$</span>plot_click, <span class="dt">allRows =</span> <span class="ot">TRUE</span>, <span class="dt">addDist =</span> <span class="ot">TRUE</span>)<span class="op">$</span>dist_)</a>
+<a class="sourceLine" id="cb35-33" data-line-number="33">  })</a>
+<a class="sourceLine" id="cb35-34" data-line-number="34">  </a>
+<a class="sourceLine" id="cb35-35" data-line-number="35">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb35-36" data-line-number="36">    df<span class="op">$</span>dist &lt;-<span class="st"> </span><span class="kw">dist</span>()</a>
+<a class="sourceLine" id="cb35-37" data-line-number="37">    <span class="kw">ggplot</span>(df, <span class="kw">aes</span>(x, y, <span class="dt">size =</span> dist)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb35-38" data-line-number="38"><span class="st">      </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb35-39" data-line-number="39">  })</a>
+<a class="sourceLine" id="cb35-40" data-line-number="40">}</a>
+<a class="sourceLine" id="cb35-41" data-line-number="41"></a>
+<a class="sourceLine" id="cb35-42" data-line-number="42"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 
 </div>

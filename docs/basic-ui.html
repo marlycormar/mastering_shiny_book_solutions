@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 3 Basic UI | Mastering Shiny Solutions</title>
   <meta name="description" content="A solutions manual to Hadley Wickham’s Mastering Shiny." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 3 Basic UI | Mastering Shiny Solutions" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,6 @@
   
 <link rel="prev" href="your-first-shiny-app.html"/>
 <link rel="next" href="basic-reactivity.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,7 +49,8 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102068953-3"></script>
 <script>
@@ -62,28 +62,26 @@
 </script>
 
 
-
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -92,9 +90,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,23 +141,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Mastering Shiny Solutions</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#note-boxes"><i class="fa fa-check"></i>Note Boxes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a>
-<ul>
+<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a><ul>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.1"><i class="fa fa-check"></i>Exercise 2.8.1</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.2"><i class="fa fa-check"></i>Exercise 2.8.2</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.3"><i class="fa fa-check"></i>Exercise 2.8.3</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.4"><i class="fa fa-check"></i>Exercise 2.8.4</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.5"><i class="fa fa-check"></i>Exercise 2.8.5</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a>
-<ul>
+<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.1"><i class="fa fa-check"></i>Exercise 3.2.8.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.2"><i class="fa fa-check"></i>Exercise 3.2.8.2</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.3"><i class="fa fa-check"></i>Exercise 3.2.8.3</a></li>
@@ -167,40 +162,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.5"><i class="fa fa-check"></i>Exercise 3.2.8.5</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.1"><i class="fa fa-check"></i>Exercise 3.3.5.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.2"><i class="fa fa-check"></i>Exercise 3.3.5.2</a></li>
-<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.3"><i class="fa fa-check"></i>Exercise 3.3.5.3</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.1"><i class="fa fa-check"></i>Exercise 3.4.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.2"><i class="fa fa-check"></i>Exercise 3.4.6.2</a></li>
+<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.3"><i class="fa fa-check"></i>Exercise 3.4.6.3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a>
-<ul>
+<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a><ul>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.1"><i class="fa fa-check"></i>Exercise 4.3.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.2"><i class="fa fa-check"></i>Exercise 4.3.6.2</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.4.6.1"><i class="fa fa-check"></i>Exercise 4.4.6.1</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a>
-<ul>
+<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a><ul>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.1"><i class="fa fa-check"></i>Exercise 5.8.1</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.2"><i class="fa fa-check"></i>Exercise 5.8.2</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.3"><i class="fa fa-check"></i>Exercise 5.8.3</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.4"><i class="fa fa-check"></i>Exercise 5.8.4</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>6</b> Workflow</a></li>
-<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a>
-<ul>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.1"><i class="fa fa-check"></i>Exercise 7.5.1</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.2"><i class="fa fa-check"></i>Exercise 7.5.2</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.3"><i class="fa fa-check"></i>Exercise 7.5.3</a></li>
+<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a><ul>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.1"><i class="fa fa-check"></i>Exercise 7.6.1</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.2"><i class="fa fa-check"></i>Exercise 7.6.2</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.3"><i class="fa fa-check"></i>Exercise 7.6.3</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="user-feedback.html"><a href="user-feedback.html"><i class="fa fa-check"></i><b>8</b> User Feedback</a></li>
-<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a>
-<ul>
+<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a><ul>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.1"><i class="fa fa-check"></i>Exercise 9.4.1</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.2"><i class="fa fa-check"></i>Exercise 9.4.2</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.3"><i class="fa fa-check"></i>Exercise 9.4.3</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.4"><i class="fa fa-check"></i>Exercise 9.4.4</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a>
-<ul>
+<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a><ul>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.1"><i class="fa fa-check"></i>Exercise 10.1.5.1</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.2"><i class="fa fa-check"></i>Exercise 10.1.5.2</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.3"><i class="fa fa-check"></i>Exercise 10.1.5.3</a></li>
@@ -215,21 +205,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.4"><i class="fa fa-check"></i>Exercise 10.3.4.4</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.5"><i class="fa fa-check"></i>Exercise 10.3.4.5</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a>
-<ul>
+<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a><ul>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.1"><i class="fa fa-check"></i>Exercise 11.3.1</a></li>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.2"><i class="fa fa-check"></i>Exercise 11.3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="tidy-evaluation.html"><a href="tidy-evaluation.html"><i class="fa fa-check"></i><b>12</b> Tidy Evaluation</a></li>
 <li class="chapter" data-level="13" data-path="general-guidelines.html"><a href="general-guidelines.html"><i class="fa fa-check"></i><b>13</b> General Guidelines</a></li>
-<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a>
-<ul>
+<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a><ul>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.1"><i class="fa fa-check"></i>Exercise 14.4.1</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.2"><i class="fa fa-check"></i>Exercise 14.4.2</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.3"><i class="fa fa-check"></i>Exercise 14.4.3</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a>
-<ul>
+<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a><ul>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.1"><i class="fa fa-check"></i>Exercise 15.6.1</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.2"><i class="fa fa-check"></i>Exercise 15.6.2</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.3"><i class="fa fa-check"></i>Exercise 15.6.3</a></li>
@@ -263,18 +250,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="basic-ui" class="section level1" number="3">
+<div id="basic-ui" class="section level1">
 <h1><span class="header-section-number">Chapter 3</span> Basic UI</h1>
-<div id="exercise-3.2.8.1" class="section level3 unnumbered" number="">
+<div id="exercise-3.2.8.1" class="section level3 unnumbered">
 <h3>Exercise 3.2.8.1</h3>
 <p>When space is at a premium, it’s useful to label text boxes using a placeholder that appears <em>inside</em> the text entry area. How do you call <code>textInput()</code> to
 generate the UI below?</p>
 <br>
 <center>
-<img src="images/placeholder.png" title="fig:" alt="placeholder" />
+<img src="images/placeholder.png" alt="placeholder" />
 </center>
-<div id="solution" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-5" class="unnumbered"><span id="unlabeled-div-6" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>Looking at the output of <code>?textInput</code>, we see the argument <code>placeholder</code> which
 takes:</p>
 <blockquote>
@@ -283,52 +270,52 @@ the control.</p>
 </blockquote>
 <p>Therefore, we can use the <code>textInput</code> with arguments as shown below to generate
 the desired UI.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="basic-ui.html#cb10-1"></a><span class="kw">textInput</span>(<span class="st">&quot;text&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="dt">placeholder =</span> <span class="st">&quot;Your name&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" data-line-number="1"><span class="kw">textInput</span>(<span class="st">&quot;text&quot;</span>, <span class="st">&quot;&quot;</span>, <span class="dt">placeholder =</span> <span class="st">&quot;Your name&quot;</span>)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.2.8.2" class="section level3 unnumbered" number="">
+<div id="exercise-3.2.8.2" class="section level3 unnumbered">
 <h3>Exercise 3.2.8.2</h3>
 <p>Carefully read the documentation for <code>sliderInput()</code> to figure out how to
 create a date slider, as shown below.</p>
 <br>
 <center>
-<img src="images/date-slider.png" title="fig:" alt="placeholder" />
+<img src="images/date-slider.png" alt="placeholder" />
 </center>
-<div id="solution-1" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-6" class="unnumbered"><span id="unlabeled-div-7" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>To create such slider, we need the following code.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="basic-ui.html#cb11-1"></a><span class="kw">sliderInput</span>(</span>
-<span id="cb11-2"><a href="basic-ui.html#cb11-2"></a>  <span class="st">&quot;dates&quot;</span>,</span>
-<span id="cb11-3"><a href="basic-ui.html#cb11-3"></a>  <span class="st">&quot;When should we deliver?&quot;</span>,</span>
-<span id="cb11-4"><a href="basic-ui.html#cb11-4"></a>  <span class="dt">min =</span> <span class="kw">as.Date</span>(<span class="st">&quot;2019-08-09&quot;</span>),</span>
-<span id="cb11-5"><a href="basic-ui.html#cb11-5"></a>  <span class="dt">max =</span> <span class="kw">as.Date</span>(<span class="st">&quot;2019-08-16&quot;</span>),</span>
-<span id="cb11-6"><a href="basic-ui.html#cb11-6"></a>  <span class="dt">value =</span> <span class="kw">as.Date</span>(<span class="st">&quot;2019-08-10&quot;</span>)</span>
-<span id="cb11-7"><a href="basic-ui.html#cb11-7"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb11-1" data-line-number="1"><span class="kw">sliderInput</span>(</a>
+<a class="sourceLine" id="cb11-2" data-line-number="2">  <span class="st">&quot;dates&quot;</span>,</a>
+<a class="sourceLine" id="cb11-3" data-line-number="3">  <span class="st">&quot;When should we deliver?&quot;</span>,</a>
+<a class="sourceLine" id="cb11-4" data-line-number="4">  <span class="dt">min =</span> <span class="kw">as.Date</span>(<span class="st">&quot;2019-08-09&quot;</span>),</a>
+<a class="sourceLine" id="cb11-5" data-line-number="5">  <span class="dt">max =</span> <span class="kw">as.Date</span>(<span class="st">&quot;2019-08-16&quot;</span>),</a>
+<a class="sourceLine" id="cb11-6" data-line-number="6">  <span class="dt">value =</span> <span class="kw">as.Date</span>(<span class="st">&quot;2019-08-10&quot;</span>)</a>
+<a class="sourceLine" id="cb11-7" data-line-number="7">)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.2.8.3" class="section level3 unnumbered" number="">
+<div id="exercise-3.2.8.3" class="section level3 unnumbered">
 <h3>Exercise 3.2.8.3</h3>
 <p>If you have a moderately long list, it’s useful to create sub-headings that
 break the list up into pieces. Read the documentation for <code>selectInput()</code> to
 figure out how. (Hint: the underlying HTML is called <code>&lt;optgroup&gt;</code>.)</p>
-<div id="solution-2" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-7" class="unnumbered"><span id="unlabeled-div-8" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>We can make the <code>choices</code> argument a list of key-value pairs where the keys
 represent the sub-headings and the values are lists containing the categorized
 elements by keys. As an illustration, the following example separates animal breeds into two keys (categories): “dogs” and “cats”.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="basic-ui.html#cb12-1"></a><span class="kw">selectInput</span>(</span>
-<span id="cb12-2"><a href="basic-ui.html#cb12-2"></a>  <span class="st">&quot;breed&quot;</span>,</span>
-<span id="cb12-3"><a href="basic-ui.html#cb12-3"></a>  <span class="st">&quot;Select your favorite animal breed:&quot;</span>,</span>
-<span id="cb12-4"><a href="basic-ui.html#cb12-4"></a>  <span class="dt">choices =</span></span>
-<span id="cb12-5"><a href="basic-ui.html#cb12-5"></a>    <span class="kw">list</span>(<span class="st">`</span><span class="dt">dogs</span><span class="st">`</span> =<span class="st"> </span><span class="kw">list</span>(<span class="st">&#39;German Shepherd&#39;</span>, <span class="st">&#39;Bulldog&#39;</span>, <span class="st">&#39;Labrador Retriever&#39;</span>),</span>
-<span id="cb12-6"><a href="basic-ui.html#cb12-6"></a>         <span class="st">`</span><span class="dt">cats</span><span class="st">`</span> =<span class="st"> </span><span class="kw">list</span>(<span class="st">&#39;Persian cat&#39;</span>, <span class="st">&#39;Bengal cat&#39;</span>, <span class="st">&#39;Siamese Cat&#39;</span>))</span>
-<span id="cb12-7"><a href="basic-ui.html#cb12-7"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" data-line-number="1"><span class="kw">selectInput</span>(</a>
+<a class="sourceLine" id="cb12-2" data-line-number="2">  <span class="st">&quot;breed&quot;</span>,</a>
+<a class="sourceLine" id="cb12-3" data-line-number="3">  <span class="st">&quot;Select your favorite animal breed:&quot;</span>,</a>
+<a class="sourceLine" id="cb12-4" data-line-number="4">  <span class="dt">choices =</span></a>
+<a class="sourceLine" id="cb12-5" data-line-number="5">    <span class="kw">list</span>(<span class="st">`</span><span class="dt">dogs</span><span class="st">`</span> =<span class="st"> </span><span class="kw">list</span>(<span class="st">&#39;German Shepherd&#39;</span>, <span class="st">&#39;Bulldog&#39;</span>, <span class="st">&#39;Labrador Retriever&#39;</span>),</a>
+<a class="sourceLine" id="cb12-6" data-line-number="6">         <span class="st">`</span><span class="dt">cats</span><span class="st">`</span> =<span class="st"> </span><span class="kw">list</span>(<span class="st">&#39;Persian cat&#39;</span>, <span class="st">&#39;Bengal cat&#39;</span>, <span class="st">&#39;Siamese Cat&#39;</span>))</a>
+<a class="sourceLine" id="cb12-7" data-line-number="7">)</a></code></pre></div>
 <p>If you run the snippet above in the console, you will see the HTML code needed
 to generate the input. You can also see the <code>&lt;optgroup&gt;</code> as hinted in the
 exercise.</p>
@@ -337,32 +324,32 @@ exercise.</p>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.2.8.4" class="section level3 unnumbered" number="">
+<div id="exercise-3.2.8.4" class="section level3 unnumbered">
 <h3>Exercise 3.2.8.4</h3>
 <p>Create a slider input to select values between 0 and 100 where the interval
 between each selectable value on the slider is 5. Then, add animation to the
 input widget so when the user presses play the input widget scrolls through
 automatically.</p>
-<div id="solution-3" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-8" class="unnumbered"><span id="unlabeled-div-9" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>We can set the interval between each selectable value using the <code>step</code>
 argument. In addition, by setting <code>animate = TRUE</code>, the slider will
 automatically animate once the user presses play.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="basic-ui.html#cb13-1"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;number&quot;</span>, <span class="st">&quot;Select a number:&quot;</span>,</span>
-<span id="cb13-2"><a href="basic-ui.html#cb13-2"></a>              <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">100</span>, <span class="dt">value =</span> <span class="dv">0</span>, </span>
-<span id="cb13-3"><a href="basic-ui.html#cb13-3"></a>              <span class="dt">step =</span> <span class="dv">5</span>, <span class="dt">animate =</span> <span class="ot">TRUE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb13-1" data-line-number="1">  <span class="kw">sliderInput</span>(<span class="st">&quot;number&quot;</span>, <span class="st">&quot;Select a number:&quot;</span>,</a>
+<a class="sourceLine" id="cb13-2" data-line-number="2">              <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">100</span>, <span class="dt">value =</span> <span class="dv">0</span>, </a>
+<a class="sourceLine" id="cb13-3" data-line-number="3">              <span class="dt">step =</span> <span class="dv">5</span>, <span class="dt">animate =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.2.8.5" class="section level3 unnumbered" number="">
+<div id="exercise-3.2.8.5" class="section level3 unnumbered">
 <h3>Exercise 3.2.8.5</h3>
 <p>Using the following numeric input box the user can enter any value between 0
 and 1000. What is the purpose of the step argument in this widget?</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="basic-ui.html#cb14-1"></a><span class="kw">numericInput</span>(<span class="st">&quot;number&quot;</span>, <span class="st">&quot;Select a value&quot;</span>, <span class="dt">value =</span> <span class="dv">150</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">1000</span>, <span class="dt">step =</span> <span class="dv">50</span>)</span></code></pre></div>
-<div id="solution-4" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" data-line-number="1"><span class="kw">numericInput</span>(<span class="st">&quot;number&quot;</span>, <span class="st">&quot;Select a value&quot;</span>, <span class="dt">value =</span> <span class="dv">150</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">1000</span>, <span class="dt">step =</span> <span class="dv">50</span>)</a></code></pre></div>
+<div class="solution">
+<h4 id="solution-9" class="unnumbered"><span id="unlabeled-div-10" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>The step argument is the amount by which the <code>numericInput</code> value is
 incremented (resp. decreased) when the user clicks the up (resp. down) arrow.
 In the previous example, when the user clicks the up (resp. down) arrow the
@@ -373,153 +360,140 @@ numeric value will increase (resp. decrease) by 50. Note: by using a
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.3.5.1" class="section level3 unnumbered" number="">
+<div id="exercise-3.3.5.1" class="section level3 unnumbered">
 <h3>Exercise 3.3.5.1</h3>
 <p>Re-create the Shiny app from the plots section, this time setting height to
 300px and width to 700px.</p>
-<div id="solution-5" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-10" class="unnumbered"><span id="unlabeled-div-11" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>The function <code>plotOutput</code> can take on static <code>width</code> and <code>height</code> arguments.
 Using the app from the plots section, we only need to add the height argument
 and modify the width.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="basic-ui.html#cb15-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb15-2"><a href="basic-ui.html#cb15-2"></a></span>
-<span id="cb15-3"><a href="basic-ui.html#cb15-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb15-4"><a href="basic-ui.html#cb15-4"></a>  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>, <span class="dt">width =</span> <span class="st">&quot;700px&quot;</span>, <span class="dt">height =</span> <span class="st">&quot;300px&quot;</span>)</span>
-<span id="cb15-5"><a href="basic-ui.html#cb15-5"></a>)</span>
-<span id="cb15-6"><a href="basic-ui.html#cb15-6"></a></span>
-<span id="cb15-7"><a href="basic-ui.html#cb15-7"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb15-8"><a href="basic-ui.html#cb15-8"></a>  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>(<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>), <span class="dt">res =</span> <span class="dv">96</span>)</span>
-<span id="cb15-9"><a href="basic-ui.html#cb15-9"></a>}</span>
-<span id="cb15-10"><a href="basic-ui.html#cb15-10"></a></span>
-<span id="cb15-11"><a href="basic-ui.html#cb15-11"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb15-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb15-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb15-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb15-4" data-line-number="4">  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>, <span class="dt">width =</span> <span class="st">&quot;700px&quot;</span>, <span class="dt">height =</span> <span class="st">&quot;300px&quot;</span>)</a>
+<a class="sourceLine" id="cb15-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb15-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb15-7" data-line-number="7">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb15-8" data-line-number="8">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>(<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>), <span class="dt">res =</span> <span class="dv">96</span>)</a>
+<a class="sourceLine" id="cb15-9" data-line-number="9">}</a>
+<a class="sourceLine" id="cb15-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb15-11" data-line-number="11"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.3.5.2" class="section level3 unnumbered" number="">
+<div id="exercise-3.3.5.2" class="section level3 unnumbered">
 <h3>Exercise 3.3.5.2</h3>
-<p>Add an additional plot to the right of the existing plot, and size it so that
-each plot takes up half the width of the app.</p>
-<div id="solution-6" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<p>Update the options for renderDataTable() below so that the table is displayed, but nothing else (i.e. remove the search, ordering, and filtering commands). You’ll need to read ?renderDataTable and review the options at <a href="https://datatables.net/reference/option/" class="uri">https://datatables.net/reference/option/</a>.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" data-line-number="1">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb16-2" data-line-number="2">  <span class="kw">dataTableOutput</span>(<span class="st">&quot;table&quot;</span>)</a>
+<a class="sourceLine" id="cb16-3" data-line-number="3">)</a>
+<a class="sourceLine" id="cb16-4" data-line-number="4">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb16-5" data-line-number="5">  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(mtcars, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">pageLength =</span> <span class="dv">5</span>))</a>
+<a class="sourceLine" id="cb16-6" data-line-number="6">}</a></code></pre></div>
+<div class="solution">
+<h4 id="solution-11" class="unnumbered"><span id="unlabeled-div-12" class="solution"><em>Solution</em>. </span>Solution</h4>
+<p>We can achieve this by setting <code>ordering</code> and <code>searching</code> to <code>FALSE</code> within the
+<code>options</code> list.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb17-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb17-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb17-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb17-4" data-line-number="4">  <span class="kw">dataTableOutput</span>(<span class="st">&quot;table&quot;</span>)</a>
+<a class="sourceLine" id="cb17-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb17-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb17-7" data-line-number="7">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb17-8" data-line-number="8">  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</a>
+<a class="sourceLine" id="cb17-9" data-line-number="9">    mtcars, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">ordering =</span> <span class="ot">FALSE</span>, <span class="dt">searching =</span> <span class="ot">FALSE</span>))</a>
+<a class="sourceLine" id="cb17-10" data-line-number="10">}</a>
+<a class="sourceLine" id="cb17-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb17-12" data-line-number="12"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
+</div>
+</div>
+<div id="exercise-3.4.6.1" class="section level3 unnumbered">
+<h3>Exercise 3.4.6.1</h3>
+<p>Create an app that contains two plots, each of which takes up half the app (regardless of what size the whole app is)</p>
+<div class="solution">
+<h4 id="solution-12" class="unnumbered"><span id="unlabeled-div-13" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>When creating the layout of a shiny app, you can use the <code>fluidRow</code> function to
 control the width of the objects it contains. This function can have columns
 and such columns can be set to have widths ranging from 1-12. Note that columns
 width within a <code>fluidRow</code> container should add up to 12.</p>
 <p>For our exercise, we need two columns of 50% width each, i.e., we should set
 the width of each column to 6.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="basic-ui.html#cb16-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb16-2"><a href="basic-ui.html#cb16-2"></a></span>
-<span id="cb16-3"><a href="basic-ui.html#cb16-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb16-4"><a href="basic-ui.html#cb16-4"></a>  <span class="kw">fluidRow</span>(</span>
-<span id="cb16-5"><a href="basic-ui.html#cb16-5"></a>    <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">6</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot1&quot;</span>)),</span>
-<span id="cb16-6"><a href="basic-ui.html#cb16-6"></a>    <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">6</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot2&quot;</span>))</span>
-<span id="cb16-7"><a href="basic-ui.html#cb16-7"></a>  )</span>
-<span id="cb16-8"><a href="basic-ui.html#cb16-8"></a>)</span>
-<span id="cb16-9"><a href="basic-ui.html#cb16-9"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb16-10"><a href="basic-ui.html#cb16-10"></a>  output<span class="op">$</span>plot1 &lt;-<span class="st"> </span><span class="kw">renderPlot</span>(<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>))</span>
-<span id="cb16-11"><a href="basic-ui.html#cb16-11"></a>  output<span class="op">$</span>plot2 &lt;-<span class="st"> </span><span class="kw">renderPlot</span>(<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>))</span>
-<span id="cb16-12"><a href="basic-ui.html#cb16-12"></a>}</span>
-<span id="cb16-13"><a href="basic-ui.html#cb16-13"></a></span>
-<span id="cb16-14"><a href="basic-ui.html#cb16-14"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb18-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb18-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb18-4" data-line-number="4">  <span class="kw">fluidRow</span>(</a>
+<a class="sourceLine" id="cb18-5" data-line-number="5">    <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">6</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot1&quot;</span>)),</a>
+<a class="sourceLine" id="cb18-6" data-line-number="6">    <span class="kw">column</span>(<span class="dt">width =</span> <span class="dv">6</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot2&quot;</span>))</a>
+<a class="sourceLine" id="cb18-7" data-line-number="7">  )</a>
+<a class="sourceLine" id="cb18-8" data-line-number="8">)</a>
+<a class="sourceLine" id="cb18-9" data-line-number="9">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb18-10" data-line-number="10">  output<span class="op">$</span>plot1 &lt;-<span class="st"> </span><span class="kw">renderPlot</span>(<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>))</a>
+<a class="sourceLine" id="cb18-11" data-line-number="11">  output<span class="op">$</span>plot2 &lt;-<span class="st"> </span><span class="kw">renderPlot</span>(<span class="kw">plot</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>))</a>
+<a class="sourceLine" id="cb18-12" data-line-number="12">}</a>
+<a class="sourceLine" id="cb18-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb18-14" data-line-number="14"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.3.5.3" class="section level3 unnumbered" number="">
-<h3>Exercise 3.3.5.3</h3>
-<p>Update the options for <code>renderDataTable()</code> below so that the table is
-displayed, but nothing else, i.e. remove the search, ordering, and filtering
-commands. You’ll need to read <code>?renderDataTable</code> and review the options at
-<a href="https://datatables.net/reference/option/" class="uri">https://datatables.net/reference/option/</a>.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="basic-ui.html#cb17-1"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb17-2"><a href="basic-ui.html#cb17-2"></a>  <span class="kw">dataTableOutput</span>(<span class="st">&quot;table&quot;</span>)</span>
-<span id="cb17-3"><a href="basic-ui.html#cb17-3"></a>)</span>
-<span id="cb17-4"><a href="basic-ui.html#cb17-4"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb17-5"><a href="basic-ui.html#cb17-5"></a>  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(mtcars, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">pageLength =</span> <span class="dv">5</span>))</span>
-<span id="cb17-6"><a href="basic-ui.html#cb17-6"></a>}</span></code></pre></div>
-<div id="solution-7" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
-<p>We can achieve this by setting <code>ordering</code> and <code>searching</code> to <code>FALSE</code> within the
-<code>options</code> list.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="basic-ui.html#cb18-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb18-2"><a href="basic-ui.html#cb18-2"></a></span>
-<span id="cb18-3"><a href="basic-ui.html#cb18-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb18-4"><a href="basic-ui.html#cb18-4"></a>  <span class="kw">dataTableOutput</span>(<span class="st">&quot;table&quot;</span>)</span>
-<span id="cb18-5"><a href="basic-ui.html#cb18-5"></a>)</span>
-<span id="cb18-6"><a href="basic-ui.html#cb18-6"></a></span>
-<span id="cb18-7"><a href="basic-ui.html#cb18-7"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb18-8"><a href="basic-ui.html#cb18-8"></a>  output<span class="op">$</span>table &lt;-<span class="st"> </span><span class="kw">renderDataTable</span>(</span>
-<span id="cb18-9"><a href="basic-ui.html#cb18-9"></a>    mtcars, <span class="dt">options =</span> <span class="kw">list</span>(<span class="dt">ordering =</span> <span class="ot">FALSE</span>, <span class="dt">searching =</span> <span class="ot">FALSE</span>))</span>
-<span id="cb18-10"><a href="basic-ui.html#cb18-10"></a>}</span>
-<span id="cb18-11"><a href="basic-ui.html#cb18-11"></a></span>
-<span id="cb18-12"><a href="basic-ui.html#cb18-12"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
-</div>
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-</div>
-<div id="exercise-3.4.6.1" class="section level3 unnumbered" number="">
-<h3>Exercise 3.4.6.1</h3>
+<div id="exercise-3.4.6.2" class="section level3 unnumbered">
+<h3>Exercise 3.4.6.2</h3>
 <p>Modify the Central Limit Theorem app so that the sidebar is on the right
 instead of the left.</p>
-<div id="solution-8" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-13" class="unnumbered"><span id="unlabeled-div-14" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>Looking at <code>?sidebarLayout</code> we can simply set the <code>position</code> argument to
 <code>right</code>. We only need to modify the UI of the app.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="basic-ui.html#cb19-1"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb19-2"><a href="basic-ui.html#cb19-2"></a>  <span class="kw">headerPanel</span>(<span class="st">&quot;Central limit theorem&quot;</span>),</span>
-<span id="cb19-3"><a href="basic-ui.html#cb19-3"></a>  <span class="kw">sidebarLayout</span>(</span>
-<span id="cb19-4"><a href="basic-ui.html#cb19-4"></a>    <span class="dt">position =</span> <span class="st">&quot;right&quot;</span>,</span>
-<span id="cb19-5"><a href="basic-ui.html#cb19-5"></a>    <span class="kw">sidebarPanel</span>(</span>
-<span id="cb19-6"><a href="basic-ui.html#cb19-6"></a>      <span class="kw">numericInput</span>(<span class="st">&quot;m&quot;</span>, <span class="st">&quot;Number of samples:&quot;</span>, <span class="dv">2</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">100</span>)</span>
-<span id="cb19-7"><a href="basic-ui.html#cb19-7"></a>    ),</span>
-<span id="cb19-8"><a href="basic-ui.html#cb19-8"></a>    <span class="kw">mainPanel</span>(</span>
-<span id="cb19-9"><a href="basic-ui.html#cb19-9"></a>      <span class="kw">plotOutput</span>(<span class="st">&quot;hist&quot;</span>)</span>
-<span id="cb19-10"><a href="basic-ui.html#cb19-10"></a>    )</span>
-<span id="cb19-11"><a href="basic-ui.html#cb19-11"></a>  )</span>
-<span id="cb19-12"><a href="basic-ui.html#cb19-12"></a>)</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb19-1" data-line-number="1">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb19-2" data-line-number="2">  <span class="kw">headerPanel</span>(<span class="st">&quot;Central limit theorem&quot;</span>),</a>
+<a class="sourceLine" id="cb19-3" data-line-number="3">  <span class="kw">sidebarLayout</span>(</a>
+<a class="sourceLine" id="cb19-4" data-line-number="4">    <span class="dt">position =</span> <span class="st">&quot;right&quot;</span>,</a>
+<a class="sourceLine" id="cb19-5" data-line-number="5">    <span class="kw">sidebarPanel</span>(</a>
+<a class="sourceLine" id="cb19-6" data-line-number="6">      <span class="kw">numericInput</span>(<span class="st">&quot;m&quot;</span>, <span class="st">&quot;Number of samples:&quot;</span>, <span class="dv">2</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb19-7" data-line-number="7">    ),</a>
+<a class="sourceLine" id="cb19-8" data-line-number="8">    <span class="kw">mainPanel</span>(</a>
+<a class="sourceLine" id="cb19-9" data-line-number="9">      <span class="kw">plotOutput</span>(<span class="st">&quot;hist&quot;</span>)</a>
+<a class="sourceLine" id="cb19-10" data-line-number="10">    )</a>
+<a class="sourceLine" id="cb19-11" data-line-number="11">  )</a>
+<a class="sourceLine" id="cb19-12" data-line-number="12">)</a></code></pre></div>
 </div>
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
-<!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-3.4.6.2" class="section level3 unnumbered" number="">
-<h3>Exercise 3.4.6.2</h3>
+<div id="exercise-3.4.6.3" class="section level3 unnumbered">
+<h3>Exercise 3.4.6.3</h3>
 <p>Browse the themes available in the shinythemes package, pick an attractive
 theme, and apply it to the Central Limit Theorem app.</p>
-<div id="solution-9" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-14" class="unnumbered"><span id="unlabeled-div-15" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>We can browse the themes <a href="https://rstudio.github.io/shinythemes/">here</a> and
 apply it by setting the <code>theme</code> argument within <code>fluidPage</code> to
-<code>shinythemes::shinytheme("theme_name")</code></p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="basic-ui.html#cb20-1"></a><span class="kw">library</span>(shinythemes)</span>
-<span id="cb20-2"><a href="basic-ui.html#cb20-2"></a></span>
-<span id="cb20-3"><a href="basic-ui.html#cb20-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb20-4"><a href="basic-ui.html#cb20-4"></a>  <span class="dt">theme =</span> shinythemes<span class="op">::</span><span class="kw">shinytheme</span>(<span class="st">&quot;darkly&quot;</span>),</span>
-<span id="cb20-5"><a href="basic-ui.html#cb20-5"></a>  <span class="kw">headerPanel</span>(<span class="st">&quot;Central limit theorem&quot;</span>),</span>
-<span id="cb20-6"><a href="basic-ui.html#cb20-6"></a>  <span class="kw">sidebarLayout</span>(</span>
-<span id="cb20-7"><a href="basic-ui.html#cb20-7"></a>    <span class="dt">position =</span> <span class="st">&quot;right&quot;</span>,</span>
-<span id="cb20-8"><a href="basic-ui.html#cb20-8"></a>    <span class="kw">sidebarPanel</span>(</span>
-<span id="cb20-9"><a href="basic-ui.html#cb20-9"></a>      <span class="kw">numericInput</span>(<span class="st">&quot;m&quot;</span>, <span class="st">&quot;Number of samples:&quot;</span>, <span class="dv">2</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">100</span>)</span>
-<span id="cb20-10"><a href="basic-ui.html#cb20-10"></a>    ),</span>
-<span id="cb20-11"><a href="basic-ui.html#cb20-11"></a>    <span class="kw">mainPanel</span>(</span>
-<span id="cb20-12"><a href="basic-ui.html#cb20-12"></a>      <span class="kw">plotOutput</span>(<span class="st">&quot;hist&quot;</span>)</span>
-<span id="cb20-13"><a href="basic-ui.html#cb20-13"></a>    )</span>
-<span id="cb20-14"><a href="basic-ui.html#cb20-14"></a>  )</span>
-<span id="cb20-15"><a href="basic-ui.html#cb20-15"></a>)</span>
-<span id="cb20-16"><a href="basic-ui.html#cb20-16"></a></span>
-<span id="cb20-17"><a href="basic-ui.html#cb20-17"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb20-18"><a href="basic-ui.html#cb20-18"></a>  output<span class="op">$</span>hist &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb20-19"><a href="basic-ui.html#cb20-19"></a>    means &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="fl">1e4</span>, <span class="kw">mean</span>(<span class="kw">runif</span>(input<span class="op">$</span>m)))</span>
-<span id="cb20-20"><a href="basic-ui.html#cb20-20"></a>    <span class="kw">hist</span>(means, <span class="dt">breaks =</span> <span class="dv">20</span>)</span>
-<span id="cb20-21"><a href="basic-ui.html#cb20-21"></a>  })</span>
-<span id="cb20-22"><a href="basic-ui.html#cb20-22"></a>}</span>
-<span id="cb20-23"><a href="basic-ui.html#cb20-23"></a></span>
-<span id="cb20-24"><a href="basic-ui.html#cb20-24"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<code>shinythemes::shinytheme(&quot;theme_name&quot;)</code></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" data-line-number="1"><span class="kw">library</span>(shinythemes)</a>
+<a class="sourceLine" id="cb20-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb20-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb20-4" data-line-number="4">  <span class="dt">theme =</span> shinythemes<span class="op">::</span><span class="kw">shinytheme</span>(<span class="st">&quot;darkly&quot;</span>),</a>
+<a class="sourceLine" id="cb20-5" data-line-number="5">  <span class="kw">headerPanel</span>(<span class="st">&quot;Central limit theorem&quot;</span>),</a>
+<a class="sourceLine" id="cb20-6" data-line-number="6">  <span class="kw">sidebarLayout</span>(</a>
+<a class="sourceLine" id="cb20-7" data-line-number="7">    <span class="dt">position =</span> <span class="st">&quot;right&quot;</span>,</a>
+<a class="sourceLine" id="cb20-8" data-line-number="8">    <span class="kw">sidebarPanel</span>(</a>
+<a class="sourceLine" id="cb20-9" data-line-number="9">      <span class="kw">numericInput</span>(<span class="st">&quot;m&quot;</span>, <span class="st">&quot;Number of samples:&quot;</span>, <span class="dv">2</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb20-10" data-line-number="10">    ),</a>
+<a class="sourceLine" id="cb20-11" data-line-number="11">    <span class="kw">mainPanel</span>(</a>
+<a class="sourceLine" id="cb20-12" data-line-number="12">      <span class="kw">plotOutput</span>(<span class="st">&quot;hist&quot;</span>)</a>
+<a class="sourceLine" id="cb20-13" data-line-number="13">    )</a>
+<a class="sourceLine" id="cb20-14" data-line-number="14">  )</a>
+<a class="sourceLine" id="cb20-15" data-line-number="15">)</a>
+<a class="sourceLine" id="cb20-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb20-17" data-line-number="17">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb20-18" data-line-number="18">  output<span class="op">$</span>hist &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb20-19" data-line-number="19">    means &lt;-<span class="st"> </span><span class="kw">replicate</span>(<span class="fl">1e4</span>, <span class="kw">mean</span>(<span class="kw">runif</span>(input<span class="op">$</span>m)))</a>
+<a class="sourceLine" id="cb20-20" data-line-number="20">    <span class="kw">hist</span>(means, <span class="dt">breaks =</span> <span class="dv">20</span>)</a>
+<a class="sourceLine" id="cb20-21" data-line-number="21">  })</a>
+<a class="sourceLine" id="cb20-22" data-line-number="22">}</a>
+<a class="sourceLine" id="cb20-23" data-line-number="23"></a>
+<a class="sourceLine" id="cb20-24" data-line-number="24"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 
 </div>

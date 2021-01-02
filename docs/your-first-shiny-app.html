@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 2 Your First Shiny App | Mastering Shiny Solutions</title>
   <meta name="description" content="A solutions manual to Hadley Wickham’s Mastering Shiny." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 2 Your First Shiny App | Mastering Shiny Solutions" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,6 @@
   
 <link rel="prev" href="preface.html"/>
 <link rel="next" href="basic-ui.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,7 +49,8 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102068953-3"></script>
 <script>
@@ -62,28 +62,26 @@
 </script>
 
 
-
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -92,9 +90,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,23 +141,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Mastering Shiny Solutions</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#note-boxes"><i class="fa fa-check"></i>Note Boxes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a>
-<ul>
+<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a><ul>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.1"><i class="fa fa-check"></i>Exercise 2.8.1</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.2"><i class="fa fa-check"></i>Exercise 2.8.2</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.3"><i class="fa fa-check"></i>Exercise 2.8.3</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.4"><i class="fa fa-check"></i>Exercise 2.8.4</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.5"><i class="fa fa-check"></i>Exercise 2.8.5</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a>
-<ul>
+<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.1"><i class="fa fa-check"></i>Exercise 3.2.8.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.2"><i class="fa fa-check"></i>Exercise 3.2.8.2</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.3"><i class="fa fa-check"></i>Exercise 3.2.8.3</a></li>
@@ -167,40 +162,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.5"><i class="fa fa-check"></i>Exercise 3.2.8.5</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.1"><i class="fa fa-check"></i>Exercise 3.3.5.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.2"><i class="fa fa-check"></i>Exercise 3.3.5.2</a></li>
-<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.3"><i class="fa fa-check"></i>Exercise 3.3.5.3</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.1"><i class="fa fa-check"></i>Exercise 3.4.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.2"><i class="fa fa-check"></i>Exercise 3.4.6.2</a></li>
+<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.3"><i class="fa fa-check"></i>Exercise 3.4.6.3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a>
-<ul>
+<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a><ul>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.1"><i class="fa fa-check"></i>Exercise 4.3.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.2"><i class="fa fa-check"></i>Exercise 4.3.6.2</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.4.6.1"><i class="fa fa-check"></i>Exercise 4.4.6.1</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a>
-<ul>
+<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a><ul>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.1"><i class="fa fa-check"></i>Exercise 5.8.1</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.2"><i class="fa fa-check"></i>Exercise 5.8.2</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.3"><i class="fa fa-check"></i>Exercise 5.8.3</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.4"><i class="fa fa-check"></i>Exercise 5.8.4</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>6</b> Workflow</a></li>
-<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a>
-<ul>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.1"><i class="fa fa-check"></i>Exercise 7.5.1</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.2"><i class="fa fa-check"></i>Exercise 7.5.2</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.3"><i class="fa fa-check"></i>Exercise 7.5.3</a></li>
+<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a><ul>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.1"><i class="fa fa-check"></i>Exercise 7.6.1</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.2"><i class="fa fa-check"></i>Exercise 7.6.2</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.3"><i class="fa fa-check"></i>Exercise 7.6.3</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="user-feedback.html"><a href="user-feedback.html"><i class="fa fa-check"></i><b>8</b> User Feedback</a></li>
-<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a>
-<ul>
+<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a><ul>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.1"><i class="fa fa-check"></i>Exercise 9.4.1</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.2"><i class="fa fa-check"></i>Exercise 9.4.2</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.3"><i class="fa fa-check"></i>Exercise 9.4.3</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.4"><i class="fa fa-check"></i>Exercise 9.4.4</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a>
-<ul>
+<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a><ul>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.1"><i class="fa fa-check"></i>Exercise 10.1.5.1</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.2"><i class="fa fa-check"></i>Exercise 10.1.5.2</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.3"><i class="fa fa-check"></i>Exercise 10.1.5.3</a></li>
@@ -215,21 +205,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.4"><i class="fa fa-check"></i>Exercise 10.3.4.4</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.5"><i class="fa fa-check"></i>Exercise 10.3.4.5</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a>
-<ul>
+<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a><ul>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.1"><i class="fa fa-check"></i>Exercise 11.3.1</a></li>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.2"><i class="fa fa-check"></i>Exercise 11.3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="tidy-evaluation.html"><a href="tidy-evaluation.html"><i class="fa fa-check"></i><b>12</b> Tidy Evaluation</a></li>
 <li class="chapter" data-level="13" data-path="general-guidelines.html"><a href="general-guidelines.html"><i class="fa fa-check"></i><b>13</b> General Guidelines</a></li>
-<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a>
-<ul>
+<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a><ul>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.1"><i class="fa fa-check"></i>Exercise 14.4.1</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.2"><i class="fa fa-check"></i>Exercise 14.4.2</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.3"><i class="fa fa-check"></i>Exercise 14.4.3</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a>
-<ul>
+<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a><ul>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.1"><i class="fa fa-check"></i>Exercise 15.6.1</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.2"><i class="fa fa-check"></i>Exercise 15.6.2</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.3"><i class="fa fa-check"></i>Exercise 15.6.3</a></li>
@@ -263,187 +250,187 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="your-first-shiny-app" class="section level1" number="2">
+<div id="your-first-shiny-app" class="section level1">
 <h1><span class="header-section-number">Chapter 2</span> Your First Shiny App</h1>
-<div id="exercise-2.8.1" class="section level3 unnumbered" number="">
+<div id="exercise-2.8.1" class="section level3 unnumbered">
 <h3>Exercise 2.8.1</h3>
 <p>Create an app that greets the user by name. You don’t know all the functions
 you need to do this yet, so I’ve included some lines of code below. Figure out
 which lines you’ll use and then copy and paste them into the right place in a
 Shiny app.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="your-first-shiny-app.html#cb1-1"></a><span class="kw">textInput</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;What&#39;s your name?&quot;</span>)</span>
-<span id="cb1-2"><a href="your-first-shiny-app.html#cb1-2"></a><span class="kw">renderText</span>({</span>
-<span id="cb1-3"><a href="your-first-shiny-app.html#cb1-3"></a>  <span class="kw">paste0</span>(<span class="st">&quot;Hello &quot;</span>, input<span class="op">$</span>name)</span>
-<span id="cb1-4"><a href="your-first-shiny-app.html#cb1-4"></a>})</span>
-<span id="cb1-5"><a href="your-first-shiny-app.html#cb1-5"></a><span class="kw">numericInput</span>(<span class="st">&quot;age&quot;</span>, <span class="st">&quot;How old are you?&quot;</span>)</span>
-<span id="cb1-6"><a href="your-first-shiny-app.html#cb1-6"></a><span class="kw">textOutput</span>(<span class="st">&quot;greeting&quot;</span>)</span>
-<span id="cb1-7"><a href="your-first-shiny-app.html#cb1-7"></a><span class="kw">tableOutput</span>(<span class="st">&quot;mortgage&quot;</span>)</span>
-<span id="cb1-8"><a href="your-first-shiny-app.html#cb1-8"></a><span class="kw">renderPlot</span>(<span class="st">&quot;histogram&quot;</span>, {</span>
-<span id="cb1-9"><a href="your-first-shiny-app.html#cb1-9"></a>  <span class="kw">hist</span>(<span class="kw">rnorm</span>(<span class="dv">1000</span>))</span>
-<span id="cb1-10"><a href="your-first-shiny-app.html#cb1-10"></a>}, <span class="dt">res =</span> <span class="dv">96</span>)</span></code></pre></div>
-<div id="solution" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">textInput</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;What&#39;s your name?&quot;</span>)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw">renderText</span>({</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3">  <span class="kw">paste0</span>(<span class="st">&quot;Hello &quot;</span>, input<span class="op">$</span>name)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4">})</a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">numericInput</span>(<span class="st">&quot;age&quot;</span>, <span class="st">&quot;How old are you?&quot;</span>)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw">textOutput</span>(<span class="st">&quot;greeting&quot;</span>)</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="kw">tableOutput</span>(<span class="st">&quot;mortgage&quot;</span>)</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="kw">renderPlot</span>(<span class="st">&quot;histogram&quot;</span>, {</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">  <span class="kw">hist</span>(<span class="kw">rnorm</span>(<span class="dv">1000</span>))</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">}, <span class="dt">res =</span> <span class="dv">96</span>)</a></code></pre></div>
+<div class="solution">
+<h4 id="solution" class="unnumbered"><span id="unlabeled-div-1" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>In the UI, we will need a <code>textInput</code> for the user to input text, and
 a <code>textOutput</code> to output any custom text to the app. The corresponding server
 function to <code>textOutput</code> is <code>renderText</code>, which we can use to compose the
 output element we’ve named “greeting”.</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="your-first-shiny-app.html#cb2-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb2-2"><a href="your-first-shiny-app.html#cb2-2"></a></span>
-<span id="cb2-3"><a href="your-first-shiny-app.html#cb2-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb2-4"><a href="your-first-shiny-app.html#cb2-4"></a>  <span class="kw">textInput</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;What&#39;s your name?&quot;</span>),</span>
-<span id="cb2-5"><a href="your-first-shiny-app.html#cb2-5"></a>  <span class="kw">textOutput</span>(<span class="st">&quot;greeting&quot;</span>)</span>
-<span id="cb2-6"><a href="your-first-shiny-app.html#cb2-6"></a>)</span>
-<span id="cb2-7"><a href="your-first-shiny-app.html#cb2-7"></a></span>
-<span id="cb2-8"><a href="your-first-shiny-app.html#cb2-8"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb2-9"><a href="your-first-shiny-app.html#cb2-9"></a>  output<span class="op">$</span>greeting &lt;-<span class="st"> </span><span class="kw">renderText</span>({</span>
-<span id="cb2-10"><a href="your-first-shiny-app.html#cb2-10"></a>    <span class="kw">paste0</span>(<span class="st">&quot;Hello &quot;</span>, input<span class="op">$</span>name)</span>
-<span id="cb2-11"><a href="your-first-shiny-app.html#cb2-11"></a>  })</span>
-<span id="cb2-12"><a href="your-first-shiny-app.html#cb2-12"></a>}</span>
-<span id="cb2-13"><a href="your-first-shiny-app.html#cb2-13"></a></span>
-<span id="cb2-14"><a href="your-first-shiny-app.html#cb2-14"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb2-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb2-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb2-4" data-line-number="4">  <span class="kw">textInput</span>(<span class="st">&quot;name&quot;</span>, <span class="st">&quot;What&#39;s your name?&quot;</span>),</a>
+<a class="sourceLine" id="cb2-5" data-line-number="5">  <span class="kw">textOutput</span>(<span class="st">&quot;greeting&quot;</span>)</a>
+<a class="sourceLine" id="cb2-6" data-line-number="6">)</a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"></a>
+<a class="sourceLine" id="cb2-8" data-line-number="8">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb2-9" data-line-number="9">  output<span class="op">$</span>greeting &lt;-<span class="st"> </span><span class="kw">renderText</span>({</a>
+<a class="sourceLine" id="cb2-10" data-line-number="10">    <span class="kw">paste0</span>(<span class="st">&quot;Hello &quot;</span>, input<span class="op">$</span>name)</a>
+<a class="sourceLine" id="cb2-11" data-line-number="11">  })</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12">}</a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"></a>
+<a class="sourceLine" id="cb2-14" data-line-number="14"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-2.8.2" class="section level2 unnumbered" number="">
+<div id="exercise-2.8.2" class="section level2 unnumbered">
 <h2>Exercise 2.8.2</h2>
 <p>Suppose your friend wants to design an app that allows the user to set a number
 (<code>x</code>) between 1 and 50, and displays the result of multiplying this number by
 5. This is their first attempt:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="your-first-shiny-app.html#cb3-1"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb3-2"><a href="your-first-shiny-app.html#cb3-2"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</span>
-<span id="cb3-3"><a href="your-first-shiny-app.html#cb3-3"></a>  <span class="st">&quot;then x times 5 is&quot;</span>,</span>
-<span id="cb3-4"><a href="your-first-shiny-app.html#cb3-4"></a>  <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>)</span>
-<span id="cb3-5"><a href="your-first-shiny-app.html#cb3-5"></a>)</span>
-<span id="cb3-6"><a href="your-first-shiny-app.html#cb3-6"></a></span>
-<span id="cb3-7"><a href="your-first-shiny-app.html#cb3-7"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb3-8"><a href="your-first-shiny-app.html#cb3-8"></a>  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </span>
-<span id="cb3-9"><a href="your-first-shiny-app.html#cb3-9"></a>    x <span class="op">*</span><span class="st"> </span><span class="dv">5</span></span>
-<span id="cb3-10"><a href="your-first-shiny-app.html#cb3-10"></a>  })</span>
-<span id="cb3-11"><a href="your-first-shiny-app.html#cb3-11"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2">  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</a>
+<a class="sourceLine" id="cb3-3" data-line-number="3">  <span class="st">&quot;then x times 5 is&quot;</span>,</a>
+<a class="sourceLine" id="cb3-4" data-line-number="4">  <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>)</a>
+<a class="sourceLine" id="cb3-5" data-line-number="5">)</a>
+<a class="sourceLine" id="cb3-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb3-7" data-line-number="7">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb3-8" data-line-number="8">  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </a>
+<a class="sourceLine" id="cb3-9" data-line-number="9">    x <span class="op">*</span><span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb3-10" data-line-number="10">  })</a>
+<a class="sourceLine" id="cb3-11" data-line-number="11">}</a></code></pre></div>
 <p>But unfortunately it has an error:</p>
 <br>
 <center>
-<img src="images/ex-x-times-5.png" title="fig:" alt="placeholder" />
+<img src="images/ex-x-times-5.png" alt="placeholder" />
 </center>
 <p>Can you help them find and correct the error?</p>
-<div id="solution-1" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-1" class="unnumbered"><span id="unlabeled-div-2" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>The error here arises because on the server side we need to write <code>input$x</code>
 rather than <code>x</code>. By writing <code>x</code>, we are looking for element <code>x</code> which doesn’t
 exist in the Shiny environment; <code>x</code> only exists within the read-only object
 <code>input</code>.</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="your-first-shiny-app.html#cb4-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb4-2"><a href="your-first-shiny-app.html#cb4-2"></a></span>
-<span id="cb4-3"><a href="your-first-shiny-app.html#cb4-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb4-4"><a href="your-first-shiny-app.html#cb4-4"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</span>
-<span id="cb4-5"><a href="your-first-shiny-app.html#cb4-5"></a>  <span class="st">&quot;then x times 5 is&quot;</span>,</span>
-<span id="cb4-6"><a href="your-first-shiny-app.html#cb4-6"></a>  <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>)</span>
-<span id="cb4-7"><a href="your-first-shiny-app.html#cb4-7"></a>)</span>
-<span id="cb4-8"><a href="your-first-shiny-app.html#cb4-8"></a></span>
-<span id="cb4-9"><a href="your-first-shiny-app.html#cb4-9"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb4-10"><a href="your-first-shiny-app.html#cb4-10"></a>  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </span>
-<span id="cb4-11"><a href="your-first-shiny-app.html#cb4-11"></a>    input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span><span class="dv">5</span></span>
-<span id="cb4-12"><a href="your-first-shiny-app.html#cb4-12"></a>  })</span>
-<span id="cb4-13"><a href="your-first-shiny-app.html#cb4-13"></a>}</span>
-<span id="cb4-14"><a href="your-first-shiny-app.html#cb4-14"></a></span>
-<span id="cb4-15"><a href="your-first-shiny-app.html#cb4-15"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4">  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5">  <span class="st">&quot;then x times 5 is&quot;</span>,</a>
+<a class="sourceLine" id="cb4-6" data-line-number="6">  <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>)</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </a>
+<a class="sourceLine" id="cb4-11" data-line-number="11">    input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb4-12" data-line-number="12">  })</a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">}</a>
+<a class="sourceLine" id="cb4-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb4-15" data-line-number="15"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-2.8.3" class="section level2 unnumbered" number="">
+<div id="exercise-2.8.3" class="section level2 unnumbered">
 <h2>Exercise 2.8.3</h2>
 <p>Extend the app from the previous exercise to allow the user to set the value of
 the multiplier, <code>y</code>, so that the app yields the value of <code>x * y</code>. The final
 result should look like this:</p>
 <p><img src="images/2.8.3.png" width="600" /></p>
-<div id="solution-2" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-2" class="unnumbered"><span id="unlabeled-div-3" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>Let us add another <code>sliderInput</code> with ID <code>y</code>, and use both <code>input$x</code>
 and <code>input$y</code> to calculate <code>output$product</code>.</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="your-first-shiny-app.html#cb5-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb5-2"><a href="your-first-shiny-app.html#cb5-2"></a></span>
-<span id="cb5-3"><a href="your-first-shiny-app.html#cb5-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb5-4"><a href="your-first-shiny-app.html#cb5-4"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</span>
-<span id="cb5-5"><a href="your-first-shiny-app.html#cb5-5"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;y&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;and y is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</span>
-<span id="cb5-6"><a href="your-first-shiny-app.html#cb5-6"></a>  <span class="st">&quot;then x multiplied by y is&quot;</span>,</span>
-<span id="cb5-7"><a href="your-first-shiny-app.html#cb5-7"></a>  <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>)</span>
-<span id="cb5-8"><a href="your-first-shiny-app.html#cb5-8"></a>)</span>
-<span id="cb5-9"><a href="your-first-shiny-app.html#cb5-9"></a></span>
-<span id="cb5-10"><a href="your-first-shiny-app.html#cb5-10"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb5-11"><a href="your-first-shiny-app.html#cb5-11"></a>  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </span>
-<span id="cb5-12"><a href="your-first-shiny-app.html#cb5-12"></a>    input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</span>
-<span id="cb5-13"><a href="your-first-shiny-app.html#cb5-13"></a>  })</span>
-<span id="cb5-14"><a href="your-first-shiny-app.html#cb5-14"></a>}</span>
-<span id="cb5-15"><a href="your-first-shiny-app.html#cb5-15"></a></span>
-<span id="cb5-16"><a href="your-first-shiny-app.html#cb5-16"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb5-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4">  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</a>
+<a class="sourceLine" id="cb5-5" data-line-number="5">  <span class="kw">sliderInput</span>(<span class="st">&quot;y&quot;</span>, <span class="dt">label =</span> <span class="st">&quot;and y is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">  <span class="st">&quot;then x multiplied by y is&quot;</span>,</a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">  <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>)</a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">)</a>
+<a class="sourceLine" id="cb5-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </a>
+<a class="sourceLine" id="cb5-12" data-line-number="12">    input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</a>
+<a class="sourceLine" id="cb5-13" data-line-number="13">  })</a>
+<a class="sourceLine" id="cb5-14" data-line-number="14">}</a>
+<a class="sourceLine" id="cb5-15" data-line-number="15"></a>
+<a class="sourceLine" id="cb5-16" data-line-number="16"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-2.8.4" class="section level2 unnumbered" number="">
+<div id="exercise-2.8.4" class="section level2 unnumbered">
 <h2>Exercise 2.8.4</h2>
 <p>Replace the UI and server components of your app from the previous exercise
 with the UI and server components below, run the app, and describe the app’s
 functionality. Then reduce the duplication in the app by using a reactive
 expression.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="your-first-shiny-app.html#cb6-1"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb6-2"><a href="your-first-shiny-app.html#cb6-2"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</span>
-<span id="cb6-3"><a href="your-first-shiny-app.html#cb6-3"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;and y is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">5</span>),</span>
-<span id="cb6-4"><a href="your-first-shiny-app.html#cb6-4"></a>  <span class="st">&quot;then, (x * y) is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>),</span>
-<span id="cb6-5"><a href="your-first-shiny-app.html#cb6-5"></a>  <span class="st">&quot;and, (x * y) + 5 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus5&quot;</span>),</span>
-<span id="cb6-6"><a href="your-first-shiny-app.html#cb6-6"></a>  <span class="st">&quot;and (x * y) + 10 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus10&quot;</span>)</span>
-<span id="cb6-7"><a href="your-first-shiny-app.html#cb6-7"></a>)</span>
-<span id="cb6-8"><a href="your-first-shiny-app.html#cb6-8"></a></span>
-<span id="cb6-9"><a href="your-first-shiny-app.html#cb6-9"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb6-10"><a href="your-first-shiny-app.html#cb6-10"></a>  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </span>
-<span id="cb6-11"><a href="your-first-shiny-app.html#cb6-11"></a>    product &lt;-<span class="st"> </span>input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</span>
-<span id="cb6-12"><a href="your-first-shiny-app.html#cb6-12"></a>    product</span>
-<span id="cb6-13"><a href="your-first-shiny-app.html#cb6-13"></a>  })</span>
-<span id="cb6-14"><a href="your-first-shiny-app.html#cb6-14"></a>  output<span class="op">$</span>product_plus5 &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </span>
-<span id="cb6-15"><a href="your-first-shiny-app.html#cb6-15"></a>    product &lt;-<span class="st"> </span>input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</span>
-<span id="cb6-16"><a href="your-first-shiny-app.html#cb6-16"></a>    product <span class="op">+</span><span class="st"> </span><span class="dv">5</span></span>
-<span id="cb6-17"><a href="your-first-shiny-app.html#cb6-17"></a>  })</span>
-<span id="cb6-18"><a href="your-first-shiny-app.html#cb6-18"></a>  output<span class="op">$</span>product_plus10 &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </span>
-<span id="cb6-19"><a href="your-first-shiny-app.html#cb6-19"></a>    product &lt;-<span class="st"> </span>input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</span>
-<span id="cb6-20"><a href="your-first-shiny-app.html#cb6-20"></a>    product <span class="op">+</span><span class="st"> </span><span class="dv">10</span></span>
-<span id="cb6-21"><a href="your-first-shiny-app.html#cb6-21"></a>  })</span>
-<span id="cb6-22"><a href="your-first-shiny-app.html#cb6-22"></a>}</span></code></pre></div>
-<div id="solution-3" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb6-2" data-line-number="2">  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</a>
+<a class="sourceLine" id="cb6-3" data-line-number="3">  <span class="kw">sliderInput</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;and y is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb6-4" data-line-number="4">  <span class="st">&quot;then, (x * y) is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>),</a>
+<a class="sourceLine" id="cb6-5" data-line-number="5">  <span class="st">&quot;and, (x * y) + 5 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus5&quot;</span>),</a>
+<a class="sourceLine" id="cb6-6" data-line-number="6">  <span class="st">&quot;and (x * y) + 10 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus10&quot;</span>)</a>
+<a class="sourceLine" id="cb6-7" data-line-number="7">)</a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb6-10" data-line-number="10">  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </a>
+<a class="sourceLine" id="cb6-11" data-line-number="11">    product &lt;-<span class="st"> </span>input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</a>
+<a class="sourceLine" id="cb6-12" data-line-number="12">    product</a>
+<a class="sourceLine" id="cb6-13" data-line-number="13">  })</a>
+<a class="sourceLine" id="cb6-14" data-line-number="14">  output<span class="op">$</span>product_plus5 &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </a>
+<a class="sourceLine" id="cb6-15" data-line-number="15">    product &lt;-<span class="st"> </span>input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</a>
+<a class="sourceLine" id="cb6-16" data-line-number="16">    product <span class="op">+</span><span class="st"> </span><span class="dv">5</span></a>
+<a class="sourceLine" id="cb6-17" data-line-number="17">  })</a>
+<a class="sourceLine" id="cb6-18" data-line-number="18">  output<span class="op">$</span>product_plus10 &lt;-<span class="st"> </span><span class="kw">renderText</span>({ </a>
+<a class="sourceLine" id="cb6-19" data-line-number="19">    product &lt;-<span class="st"> </span>input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y</a>
+<a class="sourceLine" id="cb6-20" data-line-number="20">    product <span class="op">+</span><span class="st"> </span><span class="dv">10</span></a>
+<a class="sourceLine" id="cb6-21" data-line-number="21">  })</a>
+<a class="sourceLine" id="cb6-22" data-line-number="22">}</a></code></pre></div>
+<div class="solution">
+<h4 id="solution-3" class="unnumbered"><span id="unlabeled-div-4" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>The application above has two numeric inputs <code>input$x</code> and <code>input$y</code>. It
 computes three values: <code>x*y</code>, <code>x*y + 5</code>, and <code>x*y + 10</code>. We can reduce
 duplication by making the <code>product</code> variable a reactive value and using it
 within all three outputs.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="your-first-shiny-app.html#cb7-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb7-2"><a href="your-first-shiny-app.html#cb7-2"></a></span>
-<span id="cb7-3"><a href="your-first-shiny-app.html#cb7-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb7-4"><a href="your-first-shiny-app.html#cb7-4"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</span>
-<span id="cb7-5"><a href="your-first-shiny-app.html#cb7-5"></a>  <span class="kw">sliderInput</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;and y is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">5</span>),</span>
-<span id="cb7-6"><a href="your-first-shiny-app.html#cb7-6"></a>  <span class="st">&quot;then, (x * y) is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>),</span>
-<span id="cb7-7"><a href="your-first-shiny-app.html#cb7-7"></a>  <span class="st">&quot;and, (x * y) + 5 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus5&quot;</span>),</span>
-<span id="cb7-8"><a href="your-first-shiny-app.html#cb7-8"></a>  <span class="st">&quot;and (x * y) + 10 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus10&quot;</span>)</span>
-<span id="cb7-9"><a href="your-first-shiny-app.html#cb7-9"></a>)</span>
-<span id="cb7-10"><a href="your-first-shiny-app.html#cb7-10"></a></span>
-<span id="cb7-11"><a href="your-first-shiny-app.html#cb7-11"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb7-12"><a href="your-first-shiny-app.html#cb7-12"></a>  </span>
-<span id="cb7-13"><a href="your-first-shiny-app.html#cb7-13"></a>  product &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y)</span>
-<span id="cb7-14"><a href="your-first-shiny-app.html#cb7-14"></a>  </span>
-<span id="cb7-15"><a href="your-first-shiny-app.html#cb7-15"></a>  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>( <span class="kw">product</span>() )</span>
-<span id="cb7-16"><a href="your-first-shiny-app.html#cb7-16"></a>  output<span class="op">$</span>product_plus5 &lt;-<span class="st"> </span><span class="kw">renderText</span>( <span class="kw">product</span>() <span class="op">+</span><span class="st"> </span><span class="dv">5</span> )</span>
-<span id="cb7-17"><a href="your-first-shiny-app.html#cb7-17"></a>  output<span class="op">$</span>product_plus10 &lt;-<span class="st"> </span><span class="kw">renderText</span>( <span class="kw">product</span>() <span class="op">+</span><span class="st"> </span><span class="dv">10</span> )</span>
-<span id="cb7-18"><a href="your-first-shiny-app.html#cb7-18"></a>}</span>
-<span id="cb7-19"><a href="your-first-shiny-app.html#cb7-19"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb7-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb7-4" data-line-number="4">  <span class="kw">sliderInput</span>(<span class="st">&quot;x&quot;</span>, <span class="st">&quot;If x is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">30</span>),</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5">  <span class="kw">sliderInput</span>(<span class="st">&quot;y&quot;</span>, <span class="st">&quot;and y is&quot;</span>, <span class="dt">min =</span> <span class="dv">1</span>, <span class="dt">max =</span> <span class="dv">50</span>, <span class="dt">value =</span> <span class="dv">5</span>),</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6">  <span class="st">&quot;then, (x * y) is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product&quot;</span>),</a>
+<a class="sourceLine" id="cb7-7" data-line-number="7">  <span class="st">&quot;and, (x * y) + 5 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus5&quot;</span>),</a>
+<a class="sourceLine" id="cb7-8" data-line-number="8">  <span class="st">&quot;and (x * y) + 10 is&quot;</span>, <span class="kw">textOutput</span>(<span class="st">&quot;product_plus10&quot;</span>)</a>
+<a class="sourceLine" id="cb7-9" data-line-number="9">)</a>
+<a class="sourceLine" id="cb7-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb7-12" data-line-number="12">  </a>
+<a class="sourceLine" id="cb7-13" data-line-number="13">  product &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>x <span class="op">*</span><span class="st"> </span>input<span class="op">$</span>y)</a>
+<a class="sourceLine" id="cb7-14" data-line-number="14">  </a>
+<a class="sourceLine" id="cb7-15" data-line-number="15">  output<span class="op">$</span>product &lt;-<span class="st"> </span><span class="kw">renderText</span>( <span class="kw">product</span>() )</a>
+<a class="sourceLine" id="cb7-16" data-line-number="16">  output<span class="op">$</span>product_plus5 &lt;-<span class="st"> </span><span class="kw">renderText</span>( <span class="kw">product</span>() <span class="op">+</span><span class="st"> </span><span class="dv">5</span> )</a>
+<a class="sourceLine" id="cb7-17" data-line-number="17">  output<span class="op">$</span>product_plus10 &lt;-<span class="st"> </span><span class="kw">renderText</span>( <span class="kw">product</span>() <span class="op">+</span><span class="st"> </span><span class="dv">10</span> )</a>
+<a class="sourceLine" id="cb7-18" data-line-number="18">}</a>
+<a class="sourceLine" id="cb7-19" data-line-number="19"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-2.8.5" class="section level2 unnumbered" number="">
+<div id="exercise-2.8.5" class="section level2 unnumbered">
 <h2>Exercise 2.8.5</h2>
 <p>The following app is very similar to one you’ve seen earlier in the chapter:
 you select a dataset from a package (this time we’re using the ggplot2 package)
@@ -451,28 +438,28 @@ and the app prints out a summary and plot of the data. It also follows good
 practice and makes use of reactive expressions to avoid redundancy of code.
 However there are three bugs in the code provided below. Can you find and fix
 them?</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="your-first-shiny-app.html#cb8-1"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb8-2"><a href="your-first-shiny-app.html#cb8-2"></a>datasets &lt;-<span class="st"> </span><span class="kw">data</span>(<span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)<span class="op">$</span>results[<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>), <span class="st">&quot;Item&quot;</span>]</span>
-<span id="cb8-3"><a href="your-first-shiny-app.html#cb8-3"></a></span>
-<span id="cb8-4"><a href="your-first-shiny-app.html#cb8-4"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb8-5"><a href="your-first-shiny-app.html#cb8-5"></a>  <span class="kw">selectInput</span>(<span class="st">&quot;dataset&quot;</span>, <span class="st">&quot;Dataset&quot;</span>, <span class="dt">choices =</span> datasets),</span>
-<span id="cb8-6"><a href="your-first-shiny-app.html#cb8-6"></a>  <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;summary&quot;</span>),</span>
-<span id="cb8-7"><a href="your-first-shiny-app.html#cb8-7"></a>  <span class="kw">tableOutput</span>(<span class="st">&quot;plot&quot;</span>)</span>
-<span id="cb8-8"><a href="your-first-shiny-app.html#cb8-8"></a>)</span>
-<span id="cb8-9"><a href="your-first-shiny-app.html#cb8-9"></a></span>
-<span id="cb8-10"><a href="your-first-shiny-app.html#cb8-10"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb8-11"><a href="your-first-shiny-app.html#cb8-11"></a>  dataset &lt;-<span class="st"> </span><span class="kw">reactive</span>({</span>
-<span id="cb8-12"><a href="your-first-shiny-app.html#cb8-12"></a>    <span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:ggplot2&quot;</span>)</span>
-<span id="cb8-13"><a href="your-first-shiny-app.html#cb8-13"></a>  })</span>
-<span id="cb8-14"><a href="your-first-shiny-app.html#cb8-14"></a>  output<span class="op">$</span>summmry &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({</span>
-<span id="cb8-15"><a href="your-first-shiny-app.html#cb8-15"></a>    <span class="kw">summary</span>(<span class="kw">dataset</span>())</span>
-<span id="cb8-16"><a href="your-first-shiny-app.html#cb8-16"></a>  })</span>
-<span id="cb8-17"><a href="your-first-shiny-app.html#cb8-17"></a>  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb8-18"><a href="your-first-shiny-app.html#cb8-18"></a>    <span class="kw">plot</span>(dataset)</span>
-<span id="cb8-19"><a href="your-first-shiny-app.html#cb8-19"></a>  }, <span class="dt">res =</span> <span class="dv">96</span>)</span>
-<span id="cb8-20"><a href="your-first-shiny-app.html#cb8-20"></a>}</span></code></pre></div>
-<div id="solution-4" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb8-2" data-line-number="2">datasets &lt;-<span class="st"> </span><span class="kw">data</span>(<span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)<span class="op">$</span>results[<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>), <span class="st">&quot;Item&quot;</span>]</a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb8-5" data-line-number="5">  <span class="kw">selectInput</span>(<span class="st">&quot;dataset&quot;</span>, <span class="st">&quot;Dataset&quot;</span>, <span class="dt">choices =</span> datasets),</a>
+<a class="sourceLine" id="cb8-6" data-line-number="6">  <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;summary&quot;</span>),</a>
+<a class="sourceLine" id="cb8-7" data-line-number="7">  <span class="kw">tableOutput</span>(<span class="st">&quot;plot&quot;</span>)</a>
+<a class="sourceLine" id="cb8-8" data-line-number="8">)</a>
+<a class="sourceLine" id="cb8-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb8-10" data-line-number="10">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb8-11" data-line-number="11">  dataset &lt;-<span class="st"> </span><span class="kw">reactive</span>({</a>
+<a class="sourceLine" id="cb8-12" data-line-number="12">    <span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:ggplot2&quot;</span>)</a>
+<a class="sourceLine" id="cb8-13" data-line-number="13">  })</a>
+<a class="sourceLine" id="cb8-14" data-line-number="14">  output<span class="op">$</span>summmry &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({</a>
+<a class="sourceLine" id="cb8-15" data-line-number="15">    <span class="kw">summary</span>(<span class="kw">dataset</span>())</a>
+<a class="sourceLine" id="cb8-16" data-line-number="16">  })</a>
+<a class="sourceLine" id="cb8-17" data-line-number="17">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb8-18" data-line-number="18">    <span class="kw">plot</span>(dataset)</a>
+<a class="sourceLine" id="cb8-19" data-line-number="19">  }, <span class="dt">res =</span> <span class="dv">96</span>)</a>
+<a class="sourceLine" id="cb8-20" data-line-number="20">}</a></code></pre></div>
+<div class="solution">
+<h4 id="solution-4" class="unnumbered"><span id="unlabeled-div-5" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>The app contains the following three bugs:</p>
 <ol style="list-style-type: decimal">
 <li>In the UI, the <code>tableOutput</code> object should really be a <code>plotOutput</code>.</li>
@@ -481,31 +468,31 @@ them?</p>
 <code>dataset()</code> rather than the reactive object.</li>
 </ol>
 <p>The fixed app looks as follows:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="your-first-shiny-app.html#cb9-1"></a><span class="kw">library</span>(ggplot2)</span>
-<span id="cb9-2"><a href="your-first-shiny-app.html#cb9-2"></a>datasets &lt;-<span class="st"> </span><span class="kw">data</span>(<span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)<span class="op">$</span>results[<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>), <span class="st">&quot;Item&quot;</span>]</span>
-<span id="cb9-3"><a href="your-first-shiny-app.html#cb9-3"></a></span>
-<span id="cb9-4"><a href="your-first-shiny-app.html#cb9-4"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb9-5"><a href="your-first-shiny-app.html#cb9-5"></a>  <span class="kw">selectInput</span>(<span class="st">&quot;dataset&quot;</span>, <span class="st">&quot;Dataset&quot;</span>, <span class="dt">choices =</span> datasets),</span>
-<span id="cb9-6"><a href="your-first-shiny-app.html#cb9-6"></a>  <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;summary&quot;</span>),</span>
-<span id="cb9-7"><a href="your-first-shiny-app.html#cb9-7"></a>  <span class="co"># 1. Change tableOutput to plotOutput.</span></span>
-<span id="cb9-8"><a href="your-first-shiny-app.html#cb9-8"></a>  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>)</span>
-<span id="cb9-9"><a href="your-first-shiny-app.html#cb9-9"></a>)</span>
-<span id="cb9-10"><a href="your-first-shiny-app.html#cb9-10"></a></span>
-<span id="cb9-11"><a href="your-first-shiny-app.html#cb9-11"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb9-12"><a href="your-first-shiny-app.html#cb9-12"></a>  dataset &lt;-<span class="st"> </span><span class="kw">reactive</span>({</span>
-<span id="cb9-13"><a href="your-first-shiny-app.html#cb9-13"></a>    <span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:ggplot2&quot;</span>)</span>
-<span id="cb9-14"><a href="your-first-shiny-app.html#cb9-14"></a>  })</span>
-<span id="cb9-15"><a href="your-first-shiny-app.html#cb9-15"></a>  <span class="co"># 2. Change summry to summary.</span></span>
-<span id="cb9-16"><a href="your-first-shiny-app.html#cb9-16"></a>  output<span class="op">$</span>summary &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({</span>
-<span id="cb9-17"><a href="your-first-shiny-app.html#cb9-17"></a>    <span class="kw">summary</span>(<span class="kw">dataset</span>())</span>
-<span id="cb9-18"><a href="your-first-shiny-app.html#cb9-18"></a>  })</span>
-<span id="cb9-19"><a href="your-first-shiny-app.html#cb9-19"></a>  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb9-20"><a href="your-first-shiny-app.html#cb9-20"></a>    <span class="co"># 3. Change dataset to dataset().</span></span>
-<span id="cb9-21"><a href="your-first-shiny-app.html#cb9-21"></a>    <span class="kw">plot</span>(<span class="kw">dataset</span>())</span>
-<span id="cb9-22"><a href="your-first-shiny-app.html#cb9-22"></a>  })</span>
-<span id="cb9-23"><a href="your-first-shiny-app.html#cb9-23"></a>}</span>
-<span id="cb9-24"><a href="your-first-shiny-app.html#cb9-24"></a></span>
-<span id="cb9-25"><a href="your-first-shiny-app.html#cb9-25"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" data-line-number="1"><span class="kw">library</span>(ggplot2)</a>
+<a class="sourceLine" id="cb9-2" data-line-number="2">datasets &lt;-<span class="st"> </span><span class="kw">data</span>(<span class="dt">package =</span> <span class="st">&quot;ggplot2&quot;</span>)<span class="op">$</span>results[<span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">10</span>), <span class="st">&quot;Item&quot;</span>]</a>
+<a class="sourceLine" id="cb9-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb9-4" data-line-number="4">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb9-5" data-line-number="5">  <span class="kw">selectInput</span>(<span class="st">&quot;dataset&quot;</span>, <span class="st">&quot;Dataset&quot;</span>, <span class="dt">choices =</span> datasets),</a>
+<a class="sourceLine" id="cb9-6" data-line-number="6">  <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;summary&quot;</span>),</a>
+<a class="sourceLine" id="cb9-7" data-line-number="7">  <span class="co"># 1. Change tableOutput to plotOutput.</span></a>
+<a class="sourceLine" id="cb9-8" data-line-number="8">  <span class="kw">plotOutput</span>(<span class="st">&quot;plot&quot;</span>)</a>
+<a class="sourceLine" id="cb9-9" data-line-number="9">)</a>
+<a class="sourceLine" id="cb9-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb9-11" data-line-number="11">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb9-12" data-line-number="12">  dataset &lt;-<span class="st"> </span><span class="kw">reactive</span>({</a>
+<a class="sourceLine" id="cb9-13" data-line-number="13">    <span class="kw">get</span>(input<span class="op">$</span>dataset, <span class="st">&quot;package:ggplot2&quot;</span>)</a>
+<a class="sourceLine" id="cb9-14" data-line-number="14">  })</a>
+<a class="sourceLine" id="cb9-15" data-line-number="15">  <span class="co"># 2. Change summry to summary.</span></a>
+<a class="sourceLine" id="cb9-16" data-line-number="16">  output<span class="op">$</span>summary &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({</a>
+<a class="sourceLine" id="cb9-17" data-line-number="17">    <span class="kw">summary</span>(<span class="kw">dataset</span>())</a>
+<a class="sourceLine" id="cb9-18" data-line-number="18">  })</a>
+<a class="sourceLine" id="cb9-19" data-line-number="19">  output<span class="op">$</span>plot &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb9-20" data-line-number="20">    <span class="co"># 3. Change dataset to dataset().</span></a>
+<a class="sourceLine" id="cb9-21" data-line-number="21">    <span class="kw">plot</span>(<span class="kw">dataset</span>())</a>
+<a class="sourceLine" id="cb9-22" data-line-number="22">  })</a>
+<a class="sourceLine" id="cb9-23" data-line-number="23">}</a>
+<a class="sourceLine" id="cb9-24" data-line-number="24"></a>
+<a class="sourceLine" id="cb9-25" data-line-number="25"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 
 </div>

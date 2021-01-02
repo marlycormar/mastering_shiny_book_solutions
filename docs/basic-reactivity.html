@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 4 Basic Reactivity | Mastering Shiny Solutions</title>
   <meta name="description" content="A solutions manual to Hadley Wickham’s Mastering Shiny." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 4 Basic Reactivity | Mastering Shiny Solutions" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,6 @@
   
 <link rel="prev" href="basic-ui.html"/>
 <link rel="next" href="case-study-er-injuries.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,7 +49,8 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102068953-3"></script>
 <script>
@@ -62,28 +62,26 @@
 </script>
 
 
-
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -92,9 +90,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,23 +141,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Mastering Shiny Solutions</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#note-boxes"><i class="fa fa-check"></i>Note Boxes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a>
-<ul>
+<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a><ul>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.1"><i class="fa fa-check"></i>Exercise 2.8.1</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.2"><i class="fa fa-check"></i>Exercise 2.8.2</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.3"><i class="fa fa-check"></i>Exercise 2.8.3</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.4"><i class="fa fa-check"></i>Exercise 2.8.4</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.5"><i class="fa fa-check"></i>Exercise 2.8.5</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a>
-<ul>
+<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.1"><i class="fa fa-check"></i>Exercise 3.2.8.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.2"><i class="fa fa-check"></i>Exercise 3.2.8.2</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.3"><i class="fa fa-check"></i>Exercise 3.2.8.3</a></li>
@@ -167,40 +162,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.5"><i class="fa fa-check"></i>Exercise 3.2.8.5</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.1"><i class="fa fa-check"></i>Exercise 3.3.5.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.2"><i class="fa fa-check"></i>Exercise 3.3.5.2</a></li>
-<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.3"><i class="fa fa-check"></i>Exercise 3.3.5.3</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.1"><i class="fa fa-check"></i>Exercise 3.4.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.2"><i class="fa fa-check"></i>Exercise 3.4.6.2</a></li>
+<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.3"><i class="fa fa-check"></i>Exercise 3.4.6.3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a>
-<ul>
+<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a><ul>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.1"><i class="fa fa-check"></i>Exercise 4.3.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.2"><i class="fa fa-check"></i>Exercise 4.3.6.2</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.4.6.1"><i class="fa fa-check"></i>Exercise 4.4.6.1</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a>
-<ul>
+<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a><ul>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.1"><i class="fa fa-check"></i>Exercise 5.8.1</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.2"><i class="fa fa-check"></i>Exercise 5.8.2</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.3"><i class="fa fa-check"></i>Exercise 5.8.3</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.4"><i class="fa fa-check"></i>Exercise 5.8.4</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>6</b> Workflow</a></li>
-<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a>
-<ul>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.1"><i class="fa fa-check"></i>Exercise 7.5.1</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.2"><i class="fa fa-check"></i>Exercise 7.5.2</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.3"><i class="fa fa-check"></i>Exercise 7.5.3</a></li>
+<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a><ul>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.1"><i class="fa fa-check"></i>Exercise 7.6.1</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.2"><i class="fa fa-check"></i>Exercise 7.6.2</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.3"><i class="fa fa-check"></i>Exercise 7.6.3</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="user-feedback.html"><a href="user-feedback.html"><i class="fa fa-check"></i><b>8</b> User Feedback</a></li>
-<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a>
-<ul>
+<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a><ul>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.1"><i class="fa fa-check"></i>Exercise 9.4.1</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.2"><i class="fa fa-check"></i>Exercise 9.4.2</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.3"><i class="fa fa-check"></i>Exercise 9.4.3</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.4"><i class="fa fa-check"></i>Exercise 9.4.4</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a>
-<ul>
+<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a><ul>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.1"><i class="fa fa-check"></i>Exercise 10.1.5.1</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.2"><i class="fa fa-check"></i>Exercise 10.1.5.2</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.3"><i class="fa fa-check"></i>Exercise 10.1.5.3</a></li>
@@ -215,21 +205,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.4"><i class="fa fa-check"></i>Exercise 10.3.4.4</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.5"><i class="fa fa-check"></i>Exercise 10.3.4.5</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a>
-<ul>
+<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a><ul>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.1"><i class="fa fa-check"></i>Exercise 11.3.1</a></li>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.2"><i class="fa fa-check"></i>Exercise 11.3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="tidy-evaluation.html"><a href="tidy-evaluation.html"><i class="fa fa-check"></i><b>12</b> Tidy Evaluation</a></li>
 <li class="chapter" data-level="13" data-path="general-guidelines.html"><a href="general-guidelines.html"><i class="fa fa-check"></i><b>13</b> General Guidelines</a></li>
-<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a>
-<ul>
+<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a><ul>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.1"><i class="fa fa-check"></i>Exercise 14.4.1</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.2"><i class="fa fa-check"></i>Exercise 14.4.2</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.3"><i class="fa fa-check"></i>Exercise 14.4.3</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a>
-<ul>
+<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a><ul>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.1"><i class="fa fa-check"></i>Exercise 15.6.1</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.2"><i class="fa fa-check"></i>Exercise 15.6.2</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.3"><i class="fa fa-check"></i>Exercise 15.6.3</a></li>
@@ -263,31 +250,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="basic-reactivity" class="section level1" number="4">
+<div id="basic-reactivity" class="section level1">
 <h1><span class="header-section-number">Chapter 4</span> Basic Reactivity</h1>
-<div id="exercise-4.3.6.1" class="section level3 unnumbered" number="">
+<div id="exercise-4.3.6.1" class="section level3 unnumbered">
 <h3>Exercise 4.3.6.1</h3>
 <p>Draw the reactive graph for the following server functions:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="basic-reactivity.html#cb21-1"></a>server1 &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb21-2"><a href="basic-reactivity.html#cb21-2"></a>  c &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>a <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>b)</span>
-<span id="cb21-3"><a href="basic-reactivity.html#cb21-3"></a>  e &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">c</span>() <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>d)</span>
-<span id="cb21-4"><a href="basic-reactivity.html#cb21-4"></a>  output<span class="op">$</span>f &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">e</span>())</span>
-<span id="cb21-5"><a href="basic-reactivity.html#cb21-5"></a>}</span>
-<span id="cb21-6"><a href="basic-reactivity.html#cb21-6"></a></span>
-<span id="cb21-7"><a href="basic-reactivity.html#cb21-7"></a>server2 &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb21-8"><a href="basic-reactivity.html#cb21-8"></a>  x &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>x1 <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>x2 <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>x3)</span>
-<span id="cb21-9"><a href="basic-reactivity.html#cb21-9"></a>  y &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>y1 <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>y2)</span>
-<span id="cb21-10"><a href="basic-reactivity.html#cb21-10"></a>  output<span class="op">$</span>z &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">x</span>() <span class="op">/</span><span class="st"> </span><span class="kw">y</span>())</span>
-<span id="cb21-11"><a href="basic-reactivity.html#cb21-11"></a>}</span>
-<span id="cb21-12"><a href="basic-reactivity.html#cb21-12"></a></span>
-<span id="cb21-13"><a href="basic-reactivity.html#cb21-13"></a>server3 &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb21-14"><a href="basic-reactivity.html#cb21-14"></a>  d &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">c</span>() <span class="op">^</span><span class="st"> </span>input<span class="op">$</span>d)</span>
-<span id="cb21-15"><a href="basic-reactivity.html#cb21-15"></a>  a &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>a <span class="op">*</span><span class="st"> </span><span class="dv">10</span>)</span>
-<span id="cb21-16"><a href="basic-reactivity.html#cb21-16"></a>  c &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">b</span>() <span class="op">/</span><span class="st"> </span>input<span class="op">$</span>c)</span>
-<span id="cb21-17"><a href="basic-reactivity.html#cb21-17"></a>  b &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">a</span>() <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>b)</span>
-<span id="cb21-18"><a href="basic-reactivity.html#cb21-18"></a>}</span></code></pre></div>
-<div id="solution" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb21-1" data-line-number="1">server1 &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb21-2" data-line-number="2">  c &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>a <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>b)</a>
+<a class="sourceLine" id="cb21-3" data-line-number="3">  e &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">c</span>() <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>d)</a>
+<a class="sourceLine" id="cb21-4" data-line-number="4">  output<span class="op">$</span>f &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">e</span>())</a>
+<a class="sourceLine" id="cb21-5" data-line-number="5">}</a>
+<a class="sourceLine" id="cb21-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb21-7" data-line-number="7">server2 &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb21-8" data-line-number="8">  x &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>x1 <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>x2 <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>x3)</a>
+<a class="sourceLine" id="cb21-9" data-line-number="9">  y &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>y1 <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>y2)</a>
+<a class="sourceLine" id="cb21-10" data-line-number="10">  output<span class="op">$</span>z &lt;-<span class="st"> </span><span class="kw">renderText</span>(<span class="kw">x</span>() <span class="op">/</span><span class="st"> </span><span class="kw">y</span>())</a>
+<a class="sourceLine" id="cb21-11" data-line-number="11">}</a>
+<a class="sourceLine" id="cb21-12" data-line-number="12"></a>
+<a class="sourceLine" id="cb21-13" data-line-number="13">server3 &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb21-14" data-line-number="14">  d &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">c</span>() <span class="op">^</span><span class="st"> </span>input<span class="op">$</span>d)</a>
+<a class="sourceLine" id="cb21-15" data-line-number="15">  a &lt;-<span class="st"> </span><span class="kw">reactive</span>(input<span class="op">$</span>a <span class="op">*</span><span class="st"> </span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb21-16" data-line-number="16">  c &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">b</span>() <span class="op">/</span><span class="st"> </span>input<span class="op">$</span>c)</a>
+<a class="sourceLine" id="cb21-17" data-line-number="17">  b &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">a</span>() <span class="op">+</span><span class="st"> </span>input<span class="op">$</span>b)</a>
+<a class="sourceLine" id="cb21-18" data-line-number="18">}</a></code></pre></div>
+<div class="solution">
+<h4 id="solution-15" class="unnumbered"><span id="unlabeled-div-16" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>To create the reactive graph we need to consider the inputs, reactive
 expressions, and outputs of the app.</p>
 <p>For <code>server1</code> we have the following objects:</p>
@@ -299,7 +286,7 @@ expressions, and outputs of the app.</p>
 <p>Inputs <code>input$a</code> and <code>input$b</code> are used to create <code>c()</code>, which is combined with
 <code>input$d</code> to create <code>e()</code>. The output depends only on <code>e()</code>.</p>
 <center>
-<img src="images/4.3.6.1-s1.png" title="fig:" width="500" alt="reactive graph - server 1" />
+<img src="images/4.3.6.1-s1.png" alt="reactive graph - server 1" width="500" />
 </center>
 <p><br></p>
 <p>For <code>server2</code> we have the following objects:</p>
@@ -312,7 +299,7 @@ expressions, and outputs of the app.</p>
 addition, inputs <code>input$x1</code>, <code>input$x2</code>, and <code>input$x3</code> are required to create
 the reactive <code>x()</code>. The output depends on both <code>x()</code> and <code>y()</code>.</p>
 <center>
-<img src="images/4.3.6.1-s2.png" title="fig:" width="400" alt="reactive graph - server 2" />
+<img src="images/4.3.6.1-s2.png" alt="reactive graph - server 2" width="400" />
 </center>
 <p><br></p>
 <p>For <code>server3</code> we have the following objects:</p>
@@ -324,7 +311,7 @@ the reactive <code>x()</code>. The output depends on both <code>x()</code> and <
 <code>input$b</code>, and <code>c()</code> relies on both <code>b()</code> and <code>input$c</code>. The final output
 depends on both <code>c()</code> and <code>input$d</code>.</p>
 <center>
-<img src="images/4.3.6.1-s3.png" title="fig:" width="600" alt="reactive graph - server 3" />
+<img src="images/4.3.6.1-s3.png" alt="reactive graph - server 3" width="600" />
 </center>
 <p><br></p>
 </div>
@@ -332,23 +319,43 @@ depends on both <code>c()</code> and <code>input$d</code>.</p>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-4.3.6.2" class="section level3 unnumbered" number="">
+<div id="exercise-4.3.6.2" class="section level3 unnumbered">
 <h3>Exercise 4.3.6.2</h3>
-<p>Can the reactive graph contain a cycle? Why/why not?</p>
-<div id="solution-1" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
-<p>No! This will create circular references and a recursion loop!</p>
+<p>Why will this code fail?</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" data-line-number="1">var &lt;-<span class="st"> </span><span class="kw">reactive</span>(df[input<span class="op">$</span>var])</a>
+<a class="sourceLine" id="cb22-2" data-line-number="2">range &lt;-<span class="st"> </span><span class="kw">reactive</span>(<span class="kw">range</span>(<span class="kw">var</span>(), <span class="dt">na.rm =</span> <span class="ot">TRUE</span>))</a></code></pre></div>
+<p>Why is <code>var()</code> a bad name for a reactive?</p>
+<div class="solution">
+<h4 id="solution-16" class="unnumbered"><span id="unlabeled-div-17" class="solution"><em>Solution</em>. </span>Solution</h4>
+<p>This code doesn’t work because we called our reactive <code>range</code>, so when we call the <code>range</code> function we’re actually calling our new reactive. If we change the name of the reactive from <code>range</code> to <code>col_range</code> then the code will work. Similarly, <code>var()</code> is not a good name for a reactive because it’s already a function to compute the variance of <code>x</code>! <code>?cor::var</code></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb23-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb23-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb23-3" data-line-number="3">df &lt;-<span class="st"> </span>mtcars</a>
+<a class="sourceLine" id="cb23-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb23-5" data-line-number="5">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb23-6" data-line-number="6">    <span class="kw">selectInput</span>(<span class="st">&quot;var&quot;</span>, <span class="ot">NULL</span>, <span class="dt">choices =</span> <span class="kw">colnames</span>(df)),</a>
+<a class="sourceLine" id="cb23-7" data-line-number="7">    <span class="kw">verbatimTextOutput</span>(<span class="st">&quot;debug&quot;</span>)</a>
+<a class="sourceLine" id="cb23-8" data-line-number="8">)</a>
+<a class="sourceLine" id="cb23-9" data-line-number="9"></a>
+<a class="sourceLine" id="cb23-10" data-line-number="10">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb23-11" data-line-number="11">    col_var &lt;-<span class="st"> </span><span class="kw">reactive</span>( df[input<span class="op">$</span>var] )</a>
+<a class="sourceLine" id="cb23-12" data-line-number="12">    col_range &lt;-<span class="st"> </span><span class="kw">reactive</span>({ <span class="kw">range</span>(<span class="kw">col_var</span>(), <span class="dt">na.rm =</span> <span class="ot">TRUE</span> ) })</a>
+<a class="sourceLine" id="cb23-13" data-line-number="13">    output<span class="op">$</span>debug &lt;-<span class="st"> </span><span class="kw">renderPrint</span>({ <span class="kw">col_range</span>() })</a>
+<a class="sourceLine" id="cb23-14" data-line-number="14"></a>
+<a class="sourceLine" id="cb23-15" data-line-number="15">}</a>
+<a class="sourceLine" id="cb23-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb23-17" data-line-number="17"><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-4.4.6.1" class="section level3 unnumbered" number="">
+<div id="exercise-4.4.6.1" class="section level3 unnumbered">
 <h3>Exercise 4.4.6.1</h3>
 <p>Use reactive expressions to reduce the duplicated code in the following simple
 apps.</p>
-<div id="solution-2" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-17" class="unnumbered"><span id="unlabeled-div-18" class="solution"><em>Solution</em>. </span>Solution</h4>
 <div class="note">
 <p>Unclear about the apps mentioned in the exercise.</p>
 </div>

@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 14 Functions | Mastering Shiny Solutions</title>
   <meta name="description" content="A solutions manual to Hadley Wickham’s Mastering Shiny." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 14 Functions | Mastering Shiny Solutions" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,6 @@
   
 <link rel="prev" href="general-guidelines.html"/>
 <link rel="next" href="modules.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,7 +49,8 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102068953-3"></script>
 <script>
@@ -62,28 +62,26 @@
 </script>
 
 
-
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -92,9 +90,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,23 +141,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Mastering Shiny Solutions</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#note-boxes"><i class="fa fa-check"></i>Note Boxes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a>
-<ul>
+<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a><ul>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.1"><i class="fa fa-check"></i>Exercise 2.8.1</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.2"><i class="fa fa-check"></i>Exercise 2.8.2</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.3"><i class="fa fa-check"></i>Exercise 2.8.3</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.4"><i class="fa fa-check"></i>Exercise 2.8.4</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.5"><i class="fa fa-check"></i>Exercise 2.8.5</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a>
-<ul>
+<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.1"><i class="fa fa-check"></i>Exercise 3.2.8.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.2"><i class="fa fa-check"></i>Exercise 3.2.8.2</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.3"><i class="fa fa-check"></i>Exercise 3.2.8.3</a></li>
@@ -167,40 +162,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.5"><i class="fa fa-check"></i>Exercise 3.2.8.5</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.1"><i class="fa fa-check"></i>Exercise 3.3.5.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.2"><i class="fa fa-check"></i>Exercise 3.3.5.2</a></li>
-<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.3"><i class="fa fa-check"></i>Exercise 3.3.5.3</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.1"><i class="fa fa-check"></i>Exercise 3.4.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.2"><i class="fa fa-check"></i>Exercise 3.4.6.2</a></li>
+<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.3"><i class="fa fa-check"></i>Exercise 3.4.6.3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a>
-<ul>
+<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a><ul>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.1"><i class="fa fa-check"></i>Exercise 4.3.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.2"><i class="fa fa-check"></i>Exercise 4.3.6.2</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.4.6.1"><i class="fa fa-check"></i>Exercise 4.4.6.1</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a>
-<ul>
+<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a><ul>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.1"><i class="fa fa-check"></i>Exercise 5.8.1</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.2"><i class="fa fa-check"></i>Exercise 5.8.2</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.3"><i class="fa fa-check"></i>Exercise 5.8.3</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.4"><i class="fa fa-check"></i>Exercise 5.8.4</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>6</b> Workflow</a></li>
-<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a>
-<ul>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.1"><i class="fa fa-check"></i>Exercise 7.5.1</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.2"><i class="fa fa-check"></i>Exercise 7.5.2</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.3"><i class="fa fa-check"></i>Exercise 7.5.3</a></li>
+<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a><ul>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.1"><i class="fa fa-check"></i>Exercise 7.6.1</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.2"><i class="fa fa-check"></i>Exercise 7.6.2</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.3"><i class="fa fa-check"></i>Exercise 7.6.3</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="user-feedback.html"><a href="user-feedback.html"><i class="fa fa-check"></i><b>8</b> User Feedback</a></li>
-<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a>
-<ul>
+<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a><ul>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.1"><i class="fa fa-check"></i>Exercise 9.4.1</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.2"><i class="fa fa-check"></i>Exercise 9.4.2</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.3"><i class="fa fa-check"></i>Exercise 9.4.3</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.4"><i class="fa fa-check"></i>Exercise 9.4.4</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a>
-<ul>
+<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a><ul>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.1"><i class="fa fa-check"></i>Exercise 10.1.5.1</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.2"><i class="fa fa-check"></i>Exercise 10.1.5.2</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.3"><i class="fa fa-check"></i>Exercise 10.1.5.3</a></li>
@@ -215,21 +205,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.4"><i class="fa fa-check"></i>Exercise 10.3.4.4</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.5"><i class="fa fa-check"></i>Exercise 10.3.4.5</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a>
-<ul>
+<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a><ul>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.1"><i class="fa fa-check"></i>Exercise 11.3.1</a></li>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.2"><i class="fa fa-check"></i>Exercise 11.3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="tidy-evaluation.html"><a href="tidy-evaluation.html"><i class="fa fa-check"></i><b>12</b> Tidy Evaluation</a></li>
 <li class="chapter" data-level="13" data-path="general-guidelines.html"><a href="general-guidelines.html"><i class="fa fa-check"></i><b>13</b> General Guidelines</a></li>
-<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a>
-<ul>
+<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a><ul>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.1"><i class="fa fa-check"></i>Exercise 14.4.1</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.2"><i class="fa fa-check"></i>Exercise 14.4.2</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.3"><i class="fa fa-check"></i>Exercise 14.4.3</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a>
-<ul>
+<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a><ul>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.1"><i class="fa fa-check"></i>Exercise 15.6.1</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.2"><i class="fa fa-check"></i>Exercise 15.6.2</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.3"><i class="fa fa-check"></i>Exercise 15.6.3</a></li>
@@ -263,135 +250,135 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="functions" class="section level1" number="14">
+<div id="functions" class="section level1">
 <h1><span class="header-section-number">Chapter 14</span> Functions</h1>
 <div class="TODO">
 This chapter is in development...
 </div>
-<div id="exercise-14.4.1" class="section level3 unnumbered" number="">
+<div id="exercise-14.4.1" class="section level3 unnumbered">
 <h3>Exercise 14.4.1</h3>
 <p>The following app plots user selected variables from the msleep dataset for three different types of mammals (carnivores, omnivores, and herbivores), with one tab for each type of mammal. Remove the redundancy in the <code>selectInput()</code> definitions with the use of functions.</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="functions.html#cb52-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb52-2"><a href="functions.html#cb52-2"></a></span>
-<span id="cb52-3"><a href="functions.html#cb52-3"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb52-4"><a href="functions.html#cb52-4"></a>  <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;x&quot;</span>,</span>
-<span id="cb52-5"><a href="functions.html#cb52-5"></a>              <span class="dt">label =</span> <span class="st">&quot;X-axis:&quot;</span>,</span>
-<span id="cb52-6"><a href="functions.html#cb52-6"></a>              <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>, </span>
-<span id="cb52-7"><a href="functions.html#cb52-7"></a>                          <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</span>
-<span id="cb52-8"><a href="functions.html#cb52-8"></a>              <span class="dt">selected =</span> <span class="st">&quot;sleep_rem&quot;</span>),</span>
-<span id="cb52-9"><a href="functions.html#cb52-9"></a>  <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;y&quot;</span>,</span>
-<span id="cb52-10"><a href="functions.html#cb52-10"></a>              <span class="dt">label =</span> <span class="st">&quot;Y-axis:&quot;</span>,</span>
-<span id="cb52-11"><a href="functions.html#cb52-11"></a>              <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>, </span>
-<span id="cb52-12"><a href="functions.html#cb52-12"></a>                          <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</span>
-<span id="cb52-13"><a href="functions.html#cb52-13"></a>              <span class="dt">selected =</span> <span class="st">&quot;sleep_total&quot;</span>),</span>
-<span id="cb52-14"><a href="functions.html#cb52-14"></a>  <span class="kw">tabsetPanel</span>(<span class="dt">id =</span> <span class="st">&quot;vore&quot;</span>,</span>
-<span id="cb52-15"><a href="functions.html#cb52-15"></a>              <span class="kw">tabPanel</span>(<span class="st">&quot;Carnivore&quot;</span>,</span>
-<span id="cb52-16"><a href="functions.html#cb52-16"></a>                       <span class="kw">plotOutput</span>(<span class="st">&quot;plot_carni&quot;</span>)),</span>
-<span id="cb52-17"><a href="functions.html#cb52-17"></a>              <span class="kw">tabPanel</span>(<span class="st">&quot;Omnivore&quot;</span>,</span>
-<span id="cb52-18"><a href="functions.html#cb52-18"></a>                       <span class="kw">plotOutput</span>(<span class="st">&quot;plot_omni&quot;</span>)),</span>
-<span id="cb52-19"><a href="functions.html#cb52-19"></a>              <span class="kw">tabPanel</span>(<span class="st">&quot;Herbivore&quot;</span>,</span>
-<span id="cb52-20"><a href="functions.html#cb52-20"></a>                       <span class="kw">plotOutput</span>(<span class="st">&quot;plot_herbi&quot;</span>)))</span>
-<span id="cb52-21"><a href="functions.html#cb52-21"></a>)</span>
-<span id="cb52-22"><a href="functions.html#cb52-22"></a></span>
-<span id="cb52-23"><a href="functions.html#cb52-23"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb52-24"><a href="functions.html#cb52-24"></a></span>
-<span id="cb52-25"><a href="functions.html#cb52-25"></a>  <span class="co"># make subsets</span></span>
-<span id="cb52-26"><a href="functions.html#cb52-26"></a>  carni &lt;-<span class="st"> </span><span class="kw">reactive</span>( <span class="kw">filter</span>(msleep, vore <span class="op">==</span><span class="st"> &quot;carni&quot;</span>) )</span>
-<span id="cb52-27"><a href="functions.html#cb52-27"></a>  omni  &lt;-<span class="st"> </span><span class="kw">reactive</span>( <span class="kw">filter</span>(msleep, vore <span class="op">==</span><span class="st"> &quot;omni&quot;</span>)  )</span>
-<span id="cb52-28"><a href="functions.html#cb52-28"></a>  herbi &lt;-<span class="st"> </span><span class="kw">reactive</span>( <span class="kw">filter</span>(msleep, vore <span class="op">==</span><span class="st"> &quot;herbi&quot;</span>) )</span>
-<span id="cb52-29"><a href="functions.html#cb52-29"></a></span>
-<span id="cb52-30"><a href="functions.html#cb52-30"></a>  <span class="co"># make plots</span></span>
-<span id="cb52-31"><a href="functions.html#cb52-31"></a>  output<span class="op">$</span>plot_carni &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb52-32"><a href="functions.html#cb52-32"></a>    <span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">carni</span>(), <span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y)) <span class="op">+</span></span>
-<span id="cb52-33"><a href="functions.html#cb52-33"></a><span class="st">      </span><span class="kw">geom_point</span>()</span>
-<span id="cb52-34"><a href="functions.html#cb52-34"></a>  }, <span class="dt">res =</span> <span class="dv">96</span>)</span>
-<span id="cb52-35"><a href="functions.html#cb52-35"></a>  output<span class="op">$</span>plot_omni &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb52-36"><a href="functions.html#cb52-36"></a>    <span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">omni</span>(), <span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y)) <span class="op">+</span></span>
-<span id="cb52-37"><a href="functions.html#cb52-37"></a><span class="st">      </span><span class="kw">geom_point</span>()</span>
-<span id="cb52-38"><a href="functions.html#cb52-38"></a>  }, <span class="dt">res =</span> <span class="dv">96</span>)</span>
-<span id="cb52-39"><a href="functions.html#cb52-39"></a>  output<span class="op">$</span>plot_herbi &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb52-40"><a href="functions.html#cb52-40"></a>    <span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">herbi</span>(), <span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y)) <span class="op">+</span></span>
-<span id="cb52-41"><a href="functions.html#cb52-41"></a><span class="st">      </span><span class="kw">geom_point</span>()</span>
-<span id="cb52-42"><a href="functions.html#cb52-42"></a>  }, <span class="dt">res =</span> <span class="dv">96</span>)</span>
-<span id="cb52-43"><a href="functions.html#cb52-43"></a></span>
-<span id="cb52-44"><a href="functions.html#cb52-44"></a>}</span>
-<span id="cb52-45"><a href="functions.html#cb52-45"></a></span>
-<span id="cb52-46"><a href="functions.html#cb52-46"></a><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server)</span></code></pre></div>
-<div id="solution" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb55-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb55-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb55-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb55-4" data-line-number="4">  <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;x&quot;</span>,</a>
+<a class="sourceLine" id="cb55-5" data-line-number="5">              <span class="dt">label =</span> <span class="st">&quot;X-axis:&quot;</span>,</a>
+<a class="sourceLine" id="cb55-6" data-line-number="6">              <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>, </a>
+<a class="sourceLine" id="cb55-7" data-line-number="7">                          <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</a>
+<a class="sourceLine" id="cb55-8" data-line-number="8">              <span class="dt">selected =</span> <span class="st">&quot;sleep_rem&quot;</span>),</a>
+<a class="sourceLine" id="cb55-9" data-line-number="9">  <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;y&quot;</span>,</a>
+<a class="sourceLine" id="cb55-10" data-line-number="10">              <span class="dt">label =</span> <span class="st">&quot;Y-axis:&quot;</span>,</a>
+<a class="sourceLine" id="cb55-11" data-line-number="11">              <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>, </a>
+<a class="sourceLine" id="cb55-12" data-line-number="12">                          <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</a>
+<a class="sourceLine" id="cb55-13" data-line-number="13">              <span class="dt">selected =</span> <span class="st">&quot;sleep_total&quot;</span>),</a>
+<a class="sourceLine" id="cb55-14" data-line-number="14">  <span class="kw">tabsetPanel</span>(<span class="dt">id =</span> <span class="st">&quot;vore&quot;</span>,</a>
+<a class="sourceLine" id="cb55-15" data-line-number="15">              <span class="kw">tabPanel</span>(<span class="st">&quot;Carnivore&quot;</span>,</a>
+<a class="sourceLine" id="cb55-16" data-line-number="16">                       <span class="kw">plotOutput</span>(<span class="st">&quot;plot_carni&quot;</span>)),</a>
+<a class="sourceLine" id="cb55-17" data-line-number="17">              <span class="kw">tabPanel</span>(<span class="st">&quot;Omnivore&quot;</span>,</a>
+<a class="sourceLine" id="cb55-18" data-line-number="18">                       <span class="kw">plotOutput</span>(<span class="st">&quot;plot_omni&quot;</span>)),</a>
+<a class="sourceLine" id="cb55-19" data-line-number="19">              <span class="kw">tabPanel</span>(<span class="st">&quot;Herbivore&quot;</span>,</a>
+<a class="sourceLine" id="cb55-20" data-line-number="20">                       <span class="kw">plotOutput</span>(<span class="st">&quot;plot_herbi&quot;</span>)))</a>
+<a class="sourceLine" id="cb55-21" data-line-number="21">)</a>
+<a class="sourceLine" id="cb55-22" data-line-number="22"></a>
+<a class="sourceLine" id="cb55-23" data-line-number="23">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb55-24" data-line-number="24"></a>
+<a class="sourceLine" id="cb55-25" data-line-number="25">  <span class="co"># make subsets</span></a>
+<a class="sourceLine" id="cb55-26" data-line-number="26">  carni &lt;-<span class="st"> </span><span class="kw">reactive</span>( <span class="kw">filter</span>(msleep, vore <span class="op">==</span><span class="st"> &quot;carni&quot;</span>) )</a>
+<a class="sourceLine" id="cb55-27" data-line-number="27">  omni  &lt;-<span class="st"> </span><span class="kw">reactive</span>( <span class="kw">filter</span>(msleep, vore <span class="op">==</span><span class="st"> &quot;omni&quot;</span>)  )</a>
+<a class="sourceLine" id="cb55-28" data-line-number="28">  herbi &lt;-<span class="st"> </span><span class="kw">reactive</span>( <span class="kw">filter</span>(msleep, vore <span class="op">==</span><span class="st"> &quot;herbi&quot;</span>) )</a>
+<a class="sourceLine" id="cb55-29" data-line-number="29"></a>
+<a class="sourceLine" id="cb55-30" data-line-number="30">  <span class="co"># make plots</span></a>
+<a class="sourceLine" id="cb55-31" data-line-number="31">  output<span class="op">$</span>plot_carni &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb55-32" data-line-number="32">    <span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">carni</span>(), <span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-33" data-line-number="33"><span class="st">      </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb55-34" data-line-number="34">  }, <span class="dt">res =</span> <span class="dv">96</span>)</a>
+<a class="sourceLine" id="cb55-35" data-line-number="35">  output<span class="op">$</span>plot_omni &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb55-36" data-line-number="36">    <span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">omni</span>(), <span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-37" data-line-number="37"><span class="st">      </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb55-38" data-line-number="38">  }, <span class="dt">res =</span> <span class="dv">96</span>)</a>
+<a class="sourceLine" id="cb55-39" data-line-number="39">  output<span class="op">$</span>plot_herbi &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb55-40" data-line-number="40">    <span class="kw">ggplot</span>(<span class="dt">data =</span> <span class="kw">herbi</span>(), <span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb55-41" data-line-number="41"><span class="st">      </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb55-42" data-line-number="42">  }, <span class="dt">res =</span> <span class="dv">96</span>)</a>
+<a class="sourceLine" id="cb55-43" data-line-number="43"></a>
+<a class="sourceLine" id="cb55-44" data-line-number="44">}</a>
+<a class="sourceLine" id="cb55-45" data-line-number="45"></a>
+<a class="sourceLine" id="cb55-46" data-line-number="46"><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server)</a></code></pre></div>
+<div class="solution">
+<h4 id="solution-40" class="unnumbered"><span id="unlabeled-div-41" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>We can see a pattern here where we are creating the same type of plot for each tabset panel, with the only variable changing being the <code>vore</code> argument. We can reduce everything we see in triplicate to functions! We can use <code>map</code> to create a single <code>create_panels</code> function which will create a tab for each of our <code>species</code>. On the server side, the data is filtered three times, and the plots are created three times. We can create a single rendering function that given the correct string it will filter the data, create the correct plot, and assign it to the correct output.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="functions.html#cb53-1"></a><span class="kw">library</span>(tidyverse)</span>
-<span id="cb53-2"><a href="functions.html#cb53-2"></a></span>
-<span id="cb53-3"><a href="functions.html#cb53-3"></a><span class="co"># use a vector for function inputs</span></span>
-<span id="cb53-4"><a href="functions.html#cb53-4"></a>species &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Carnivore&quot;</span>, <span class="st">&quot;Omnivore&quot;</span>, <span class="st">&quot;Herbivore&quot;</span>)</span>
-<span id="cb53-5"><a href="functions.html#cb53-5"></a></span>
-<span id="cb53-6"><a href="functions.html#cb53-6"></a><span class="co"># educe to a single UI function</span></span>
-<span id="cb53-7"><a href="functions.html#cb53-7"></a><span class="co"># Marly: this didn&#39;t work!</span></span>
-<span id="cb53-8"><a href="functions.html#cb53-8"></a>create_panels &lt;-<span class="st"> </span><span class="cf">function</span>(id) {</span>
-<span id="cb53-9"><a href="functions.html#cb53-9"></a>    <span class="kw">tabPanel</span>(id, <span class="kw">plotOutput</span>(<span class="kw">paste0</span>(<span class="st">&quot;plot_&quot;</span>, id)))</span>
-<span id="cb53-10"><a href="functions.html#cb53-10"></a>}</span>
-<span id="cb53-11"><a href="functions.html#cb53-11"></a></span>
-<span id="cb53-12"><a href="functions.html#cb53-12"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb53-13"><a href="functions.html#cb53-13"></a>    <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;x&quot;</span>,</span>
-<span id="cb53-14"><a href="functions.html#cb53-14"></a>                <span class="dt">label =</span> <span class="st">&quot;X-axis:&quot;</span>,</span>
-<span id="cb53-15"><a href="functions.html#cb53-15"></a>                <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>,</span>
-<span id="cb53-16"><a href="functions.html#cb53-16"></a>                            <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</span>
-<span id="cb53-17"><a href="functions.html#cb53-17"></a>                <span class="dt">selected =</span> <span class="st">&quot;sleep_rem&quot;</span>),</span>
-<span id="cb53-18"><a href="functions.html#cb53-18"></a>    <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;y&quot;</span>,</span>
-<span id="cb53-19"><a href="functions.html#cb53-19"></a>                <span class="dt">label =</span> <span class="st">&quot;Y-axis:&quot;</span>,</span>
-<span id="cb53-20"><a href="functions.html#cb53-20"></a>                <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>,</span>
-<span id="cb53-21"><a href="functions.html#cb53-21"></a>                            <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</span>
-<span id="cb53-22"><a href="functions.html#cb53-22"></a>                <span class="dt">selected =</span> <span class="st">&quot;sleep_total&quot;</span>),</span>
-<span id="cb53-23"><a href="functions.html#cb53-23"></a>    <span class="kw">tabsetPanel</span>(</span>
-<span id="cb53-24"><a href="functions.html#cb53-24"></a>        <span class="kw">tabPanel</span>(<span class="st">&quot;Carnivore&quot;</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot_Carnivore&quot;</span>)),</span>
-<span id="cb53-25"><a href="functions.html#cb53-25"></a>        <span class="kw">tabPanel</span>(<span class="st">&quot;Omnivore&quot;</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot_Omnivore&quot;</span>)),</span>
-<span id="cb53-26"><a href="functions.html#cb53-26"></a>        <span class="kw">tabPanel</span>(<span class="st">&quot;Herbivore&quot;</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot_Herbivore&quot;</span>))</span>
-<span id="cb53-27"><a href="functions.html#cb53-27"></a>    )</span>
-<span id="cb53-28"><a href="functions.html#cb53-28"></a>    <span class="co"># this works without the tabsetPanel function - why?!</span></span>
-<span id="cb53-29"><a href="functions.html#cb53-29"></a>    <span class="co"># purrr::map(species, create_panels)</span></span>
-<span id="cb53-30"><a href="functions.html#cb53-30"></a>)</span>
-<span id="cb53-31"><a href="functions.html#cb53-31"></a></span>
-<span id="cb53-32"><a href="functions.html#cb53-32"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb53-33"><a href="functions.html#cb53-33"></a></span>
-<span id="cb53-34"><a href="functions.html#cb53-34"></a>    <span class="co"># rendering plot function for each panel</span></span>
-<span id="cb53-35"><a href="functions.html#cb53-35"></a>    render_outputs &lt;-<span class="st"> </span><span class="cf">function</span>(id) {</span>
-<span id="cb53-36"><a href="functions.html#cb53-36"></a>        output[[<span class="kw">paste0</span>(<span class="st">&quot;plot_&quot;</span>, id)]] &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb53-37"><a href="functions.html#cb53-37"></a>            msleep <span class="op">%&gt;%</span></span>
-<span id="cb53-38"><a href="functions.html#cb53-38"></a><span class="st">                </span><span class="kw">filter</span>(vore <span class="op">==</span><span class="st"> </span><span class="kw">tolower</span>(stringr<span class="op">::</span><span class="kw">str_remove</span>(id, <span class="st">&quot;vore&quot;</span>)) <span class="op">%&gt;%</span></span>
-<span id="cb53-39"><a href="functions.html#cb53-39"></a><span class="st">                </span><span class="kw">ggplot</span>() <span class="op">+</span></span>
-<span id="cb53-40"><a href="functions.html#cb53-40"></a><span class="st">                </span><span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y) <span class="op">+</span></span>
-<span id="cb53-41"><a href="functions.html#cb53-41"></a><span class="st">                </span><span class="kw">geom_point</span>()</span>
-<span id="cb53-42"><a href="functions.html#cb53-42"></a>            )</span>
-<span id="cb53-43"><a href="functions.html#cb53-43"></a>        })</span>
-<span id="cb53-44"><a href="functions.html#cb53-44"></a>    }</span>
-<span id="cb53-45"><a href="functions.html#cb53-45"></a></span>
-<span id="cb53-46"><a href="functions.html#cb53-46"></a>    <span class="co"># apply to the species vector using map</span></span>
-<span id="cb53-47"><a href="functions.html#cb53-47"></a>    purrr<span class="op">::</span><span class="kw">map</span>(species, render_outputs)</span>
-<span id="cb53-48"><a href="functions.html#cb53-48"></a>}</span>
-<span id="cb53-49"><a href="functions.html#cb53-49"></a></span>
-<span id="cb53-50"><a href="functions.html#cb53-50"></a><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server)</span></code></pre></div>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" data-line-number="1"><span class="kw">library</span>(tidyverse)</a>
+<a class="sourceLine" id="cb56-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb56-3" data-line-number="3"><span class="co"># use a vector for function inputs</span></a>
+<a class="sourceLine" id="cb56-4" data-line-number="4">species &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Carnivore&quot;</span>, <span class="st">&quot;Omnivore&quot;</span>, <span class="st">&quot;Herbivore&quot;</span>)</a>
+<a class="sourceLine" id="cb56-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb56-6" data-line-number="6"><span class="co"># educe to a single UI function</span></a>
+<a class="sourceLine" id="cb56-7" data-line-number="7"><span class="co"># Marly: this didn&#39;t work!</span></a>
+<a class="sourceLine" id="cb56-8" data-line-number="8">create_panels &lt;-<span class="st"> </span><span class="cf">function</span>(id) {</a>
+<a class="sourceLine" id="cb56-9" data-line-number="9">    <span class="kw">tabPanel</span>(id, <span class="kw">plotOutput</span>(<span class="kw">paste0</span>(<span class="st">&quot;plot_&quot;</span>, id)))</a>
+<a class="sourceLine" id="cb56-10" data-line-number="10">}</a>
+<a class="sourceLine" id="cb56-11" data-line-number="11"></a>
+<a class="sourceLine" id="cb56-12" data-line-number="12">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb56-13" data-line-number="13">    <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;x&quot;</span>,</a>
+<a class="sourceLine" id="cb56-14" data-line-number="14">                <span class="dt">label =</span> <span class="st">&quot;X-axis:&quot;</span>,</a>
+<a class="sourceLine" id="cb56-15" data-line-number="15">                <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>,</a>
+<a class="sourceLine" id="cb56-16" data-line-number="16">                            <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</a>
+<a class="sourceLine" id="cb56-17" data-line-number="17">                <span class="dt">selected =</span> <span class="st">&quot;sleep_rem&quot;</span>),</a>
+<a class="sourceLine" id="cb56-18" data-line-number="18">    <span class="kw">selectInput</span>(<span class="dt">inputId =</span> <span class="st">&quot;y&quot;</span>,</a>
+<a class="sourceLine" id="cb56-19" data-line-number="19">                <span class="dt">label =</span> <span class="st">&quot;Y-axis:&quot;</span>,</a>
+<a class="sourceLine" id="cb56-20" data-line-number="20">                <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;sleep_total&quot;</span>, <span class="st">&quot;sleep_rem&quot;</span>, <span class="st">&quot;sleep_cycle&quot;</span>,</a>
+<a class="sourceLine" id="cb56-21" data-line-number="21">                            <span class="st">&quot;awake&quot;</span>, <span class="st">&quot;brainwt&quot;</span>, <span class="st">&quot;bodywt&quot;</span>),</a>
+<a class="sourceLine" id="cb56-22" data-line-number="22">                <span class="dt">selected =</span> <span class="st">&quot;sleep_total&quot;</span>),</a>
+<a class="sourceLine" id="cb56-23" data-line-number="23">    <span class="kw">tabsetPanel</span>(</a>
+<a class="sourceLine" id="cb56-24" data-line-number="24">        <span class="kw">tabPanel</span>(<span class="st">&quot;Carnivore&quot;</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot_Carnivore&quot;</span>)),</a>
+<a class="sourceLine" id="cb56-25" data-line-number="25">        <span class="kw">tabPanel</span>(<span class="st">&quot;Omnivore&quot;</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot_Omnivore&quot;</span>)),</a>
+<a class="sourceLine" id="cb56-26" data-line-number="26">        <span class="kw">tabPanel</span>(<span class="st">&quot;Herbivore&quot;</span>, <span class="kw">plotOutput</span>(<span class="st">&quot;plot_Herbivore&quot;</span>))</a>
+<a class="sourceLine" id="cb56-27" data-line-number="27">    )</a>
+<a class="sourceLine" id="cb56-28" data-line-number="28">    <span class="co"># this works without the tabsetPanel function - why?!</span></a>
+<a class="sourceLine" id="cb56-29" data-line-number="29">    <span class="co"># purrr::map(species, create_panels)</span></a>
+<a class="sourceLine" id="cb56-30" data-line-number="30">)</a>
+<a class="sourceLine" id="cb56-31" data-line-number="31"></a>
+<a class="sourceLine" id="cb56-32" data-line-number="32">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb56-33" data-line-number="33"></a>
+<a class="sourceLine" id="cb56-34" data-line-number="34">    <span class="co"># rendering plot function for each panel</span></a>
+<a class="sourceLine" id="cb56-35" data-line-number="35">    render_outputs &lt;-<span class="st"> </span><span class="cf">function</span>(id) {</a>
+<a class="sourceLine" id="cb56-36" data-line-number="36">        output[[<span class="kw">paste0</span>(<span class="st">&quot;plot_&quot;</span>, id)]] &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb56-37" data-line-number="37">            msleep <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb56-38" data-line-number="38"><span class="st">                </span><span class="kw">filter</span>(vore <span class="op">==</span><span class="st"> </span><span class="kw">tolower</span>(stringr<span class="op">::</span><span class="kw">str_remove</span>(id, <span class="st">&quot;vore&quot;</span>)) <span class="op">%&gt;%</span></a>
+<a class="sourceLine" id="cb56-39" data-line-number="39"><span class="st">                </span><span class="kw">ggplot</span>() <span class="op">+</span></a>
+<a class="sourceLine" id="cb56-40" data-line-number="40"><span class="st">                </span><span class="kw">aes_string</span>(<span class="dt">x =</span> input<span class="op">$</span>x, <span class="dt">y =</span> input<span class="op">$</span>y) <span class="op">+</span></a>
+<a class="sourceLine" id="cb56-41" data-line-number="41"><span class="st">                </span><span class="kw">geom_point</span>()</a>
+<a class="sourceLine" id="cb56-42" data-line-number="42">            )</a>
+<a class="sourceLine" id="cb56-43" data-line-number="43">        })</a>
+<a class="sourceLine" id="cb56-44" data-line-number="44">    }</a>
+<a class="sourceLine" id="cb56-45" data-line-number="45"></a>
+<a class="sourceLine" id="cb56-46" data-line-number="46">    <span class="co"># apply to the species vector using map</span></a>
+<a class="sourceLine" id="cb56-47" data-line-number="47">    purrr<span class="op">::</span><span class="kw">map</span>(species, render_outputs)</a>
+<a class="sourceLine" id="cb56-48" data-line-number="48">}</a>
+<a class="sourceLine" id="cb56-49" data-line-number="49"></a>
+<a class="sourceLine" id="cb56-50" data-line-number="50"><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-14.4.2" class="section level3 unnumbered" number="">
+<div id="exercise-14.4.2" class="section level3 unnumbered">
 <h3>Exercise 14.4.2</h3>
 <p>Continue working with the same app from the previous exercise, and further remove redundancy in the code by modularizing how subsets and plots are created.</p>
-<div id="solution-1" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-41" class="unnumbered"><span id="unlabeled-div-42" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>TODO: I’m unsure what to do with this one since we haven’t yet introduced modules?</p>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-14.4.3" class="section level3 unnumbered" number="">
+<div id="exercise-14.4.3" class="section level3 unnumbered">
 <h3>Exercise 14.4.3</h3>
 <p>Suppose you have an app that is slow to launch when a user visits it. Can
 modularizing your app code help solve this problem? Explain your reasoning.</p>
-<div id="solution-2" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-42" class="unnumbered"><span id="unlabeled-div-43" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>No, we’re just packaging our code into neater functions - this doesn’t change or optimize what is loaded when the app is launched. In fact, modularizing might even make your application slower in some cases.</p>
 </div>
 

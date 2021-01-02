@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Chapter 11 Bookmarking | Mastering Shiny Solutions</title>
   <meta name="description" content="A solutions manual to Hadley Wickham’s Mastering Shiny." />
-  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Chapter 11 Bookmarking | Mastering Shiny Solutions" />
   <meta property="og:type" content="book" />
@@ -32,7 +32,6 @@
   
 <link rel="prev" href="dynamic-ui.html"/>
 <link rel="next" href="tidy-evaluation.html"/>
-<script src="libs/header-attrs-2.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -50,7 +49,8 @@
 
 
 
-<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102068953-3"></script>
 <script>
@@ -62,28 +62,26 @@
 </script>
 
 
-
 <style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
 pre.sourceCode { margin: 0; }
 @media screen {
 div.sourceCode { overflow: auto; }
 }
 @media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(data-line-number);
     position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
+    border: none; pointer-events: all; display: inline-block;
     -webkit-touch-callout: none; -webkit-user-select: none;
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
@@ -92,9 +90,9 @@ pre.numberSource code > span > a:first-child::before
   }
 pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
 div.sourceCode
-  {   }
+  {  }
 @media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+a.sourceLine::before { text-decoration: underline; }
 }
 code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
@@ -143,23 +141,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="./">Mastering Shiny Solutions</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a>
-<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a><ul>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#note-boxes"><i class="fa fa-check"></i>Note Boxes</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#license"><i class="fa fa-check"></i>License</a></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html#acknowledgements"><i class="fa fa-check"></i>Acknowledgements</a></li>
 </ul></li>
 <li class="chapter" data-level="1" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i><b>1</b> Preface</a></li>
-<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a>
-<ul>
+<li class="chapter" data-level="2" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html"><i class="fa fa-check"></i><b>2</b> Your First Shiny App</a><ul>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.1"><i class="fa fa-check"></i>Exercise 2.8.1</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.2"><i class="fa fa-check"></i>Exercise 2.8.2</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.3"><i class="fa fa-check"></i>Exercise 2.8.3</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.4"><i class="fa fa-check"></i>Exercise 2.8.4</a></li>
 <li class="chapter" data-level="" data-path="your-first-shiny-app.html"><a href="your-first-shiny-app.html#exercise-2.8.5"><i class="fa fa-check"></i>Exercise 2.8.5</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a>
-<ul>
+<li class="chapter" data-level="3" data-path="basic-ui.html"><a href="basic-ui.html"><i class="fa fa-check"></i><b>3</b> Basic UI</a><ul>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.1"><i class="fa fa-check"></i>Exercise 3.2.8.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.2"><i class="fa fa-check"></i>Exercise 3.2.8.2</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.3"><i class="fa fa-check"></i>Exercise 3.2.8.3</a></li>
@@ -167,40 +162,35 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.2.8.5"><i class="fa fa-check"></i>Exercise 3.2.8.5</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.1"><i class="fa fa-check"></i>Exercise 3.3.5.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.2"><i class="fa fa-check"></i>Exercise 3.3.5.2</a></li>
-<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.3.5.3"><i class="fa fa-check"></i>Exercise 3.3.5.3</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.1"><i class="fa fa-check"></i>Exercise 3.4.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.2"><i class="fa fa-check"></i>Exercise 3.4.6.2</a></li>
+<li class="chapter" data-level="" data-path="basic-ui.html"><a href="basic-ui.html#exercise-3.4.6.3"><i class="fa fa-check"></i>Exercise 3.4.6.3</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a>
-<ul>
+<li class="chapter" data-level="4" data-path="basic-reactivity.html"><a href="basic-reactivity.html"><i class="fa fa-check"></i><b>4</b> Basic Reactivity</a><ul>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.1"><i class="fa fa-check"></i>Exercise 4.3.6.1</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.3.6.2"><i class="fa fa-check"></i>Exercise 4.3.6.2</a></li>
 <li class="chapter" data-level="" data-path="basic-reactivity.html"><a href="basic-reactivity.html#exercise-4.4.6.1"><i class="fa fa-check"></i>Exercise 4.4.6.1</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a>
-<ul>
+<li class="chapter" data-level="5" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html"><i class="fa fa-check"></i><b>5</b> Case Study: ER Injuries</a><ul>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.1"><i class="fa fa-check"></i>Exercise 5.8.1</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.2"><i class="fa fa-check"></i>Exercise 5.8.2</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.3"><i class="fa fa-check"></i>Exercise 5.8.3</a></li>
 <li class="chapter" data-level="" data-path="case-study-er-injuries.html"><a href="case-study-er-injuries.html#exercise-5.8.4"><i class="fa fa-check"></i>Exercise 5.8.4</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="workflow.html"><a href="workflow.html"><i class="fa fa-check"></i><b>6</b> Workflow</a></li>
-<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a>
-<ul>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.1"><i class="fa fa-check"></i>Exercise 7.5.1</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.2"><i class="fa fa-check"></i>Exercise 7.5.2</a></li>
-<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.5.3"><i class="fa fa-check"></i>Exercise 7.5.3</a></li>
+<li class="chapter" data-level="7" data-path="graphics.html"><a href="graphics.html"><i class="fa fa-check"></i><b>7</b> Graphics</a><ul>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.1"><i class="fa fa-check"></i>Exercise 7.6.1</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.2"><i class="fa fa-check"></i>Exercise 7.6.2</a></li>
+<li class="chapter" data-level="" data-path="graphics.html"><a href="graphics.html#exercise-7.6.3"><i class="fa fa-check"></i>Exercise 7.6.3</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="user-feedback.html"><a href="user-feedback.html"><i class="fa fa-check"></i><b>8</b> User Feedback</a></li>
-<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a>
-<ul>
+<li class="chapter" data-level="9" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html"><i class="fa fa-check"></i><b>9</b> Uploads and Downloads</a><ul>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.1"><i class="fa fa-check"></i>Exercise 9.4.1</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.2"><i class="fa fa-check"></i>Exercise 9.4.2</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.3"><i class="fa fa-check"></i>Exercise 9.4.3</a></li>
 <li class="chapter" data-level="" data-path="uploads-and-downloads.html"><a href="uploads-and-downloads.html#exercise-9.4.4"><i class="fa fa-check"></i>Exercise 9.4.4</a></li>
 </ul></li>
-<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a>
-<ul>
+<li class="chapter" data-level="10" data-path="dynamic-ui.html"><a href="dynamic-ui.html"><i class="fa fa-check"></i><b>10</b> Dynamic UI</a><ul>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.1"><i class="fa fa-check"></i>Exercise 10.1.5.1</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.2"><i class="fa fa-check"></i>Exercise 10.1.5.2</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.1.5.3"><i class="fa fa-check"></i>Exercise 10.1.5.3</a></li>
@@ -215,21 +205,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.4"><i class="fa fa-check"></i>Exercise 10.3.4.4</a></li>
 <li class="chapter" data-level="" data-path="dynamic-ui.html"><a href="dynamic-ui.html#exercise-10.3.4.5"><i class="fa fa-check"></i>Exercise 10.3.4.5</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a>
-<ul>
+<li class="chapter" data-level="11" data-path="bookmarking.html"><a href="bookmarking.html"><i class="fa fa-check"></i><b>11</b> Bookmarking</a><ul>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.1"><i class="fa fa-check"></i>Exercise 11.3.1</a></li>
 <li class="chapter" data-level="" data-path="bookmarking.html"><a href="bookmarking.html#exercise-11.3.2"><i class="fa fa-check"></i>Exercise 11.3.2</a></li>
 </ul></li>
 <li class="chapter" data-level="12" data-path="tidy-evaluation.html"><a href="tidy-evaluation.html"><i class="fa fa-check"></i><b>12</b> Tidy Evaluation</a></li>
 <li class="chapter" data-level="13" data-path="general-guidelines.html"><a href="general-guidelines.html"><i class="fa fa-check"></i><b>13</b> General Guidelines</a></li>
-<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a>
-<ul>
+<li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Functions</a><ul>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.1"><i class="fa fa-check"></i>Exercise 14.4.1</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.2"><i class="fa fa-check"></i>Exercise 14.4.2</a></li>
 <li class="chapter" data-level="" data-path="functions.html"><a href="functions.html#exercise-14.4.3"><i class="fa fa-check"></i>Exercise 14.4.3</a></li>
 </ul></li>
-<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a>
-<ul>
+<li class="chapter" data-level="15" data-path="modules.html"><a href="modules.html"><i class="fa fa-check"></i><b>15</b> Modules</a><ul>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.1"><i class="fa fa-check"></i>Exercise 15.6.1</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.2"><i class="fa fa-check"></i>Exercise 15.6.2</a></li>
 <li class="chapter" data-level="" data-path="modules.html"><a href="modules.html#exercise-15.6.3"><i class="fa fa-check"></i>Exercise 15.6.3</a></li>
@@ -263,71 +250,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="bookmarking" class="section level1" number="11">
+<div id="bookmarking" class="section level1">
 <h1><span class="header-section-number">Chapter 11</span> Bookmarking</h1>
 <div class="TODO">
 This chapter is in development...
 </div>
-<div id="exercise-11.3.1" class="section level3 unnumbered" number="">
+<div id="exercise-11.3.1" class="section level3 unnumbered">
 <h3>Exercise 11.3.1</h3>
 <p>Generate app for visualising the results of <a href="https://ambient.data-imaginist.com/reference/noise_simplex.html">noise::ambient_simplex()</a>. Your app should allow the user to control the frequency, fractal, lacunarity, and gain, and be bookmarkable. How can you ensure the image looks exactly the same when reloaded from the bookmark? (Think about what the seed argument implies).</p>
-<div id="solution" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
-<p>For this example, we’ll use the bookmarking by setting <code>enableBookmarking = "url"</code> within the <code>shinyApp</code> function. In order to ensure the simulation is the same each time we re-render the bookmark we’ll create a grid to use for points then set the seed to <code>42</code> to ensure the same image is rendered when the bookmark is loaded.</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="bookmarking.html#cb50-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb50-2"><a href="bookmarking.html#cb50-2"></a><span class="kw">library</span>(ambient)</span>
-<span id="cb50-3"><a href="bookmarking.html#cb50-3"></a></span>
-<span id="cb50-4"><a href="bookmarking.html#cb50-4"></a>ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</span>
-<span id="cb50-5"><a href="bookmarking.html#cb50-5"></a>    <span class="kw">sidebarLayout</span>(</span>
-<span id="cb50-6"><a href="bookmarking.html#cb50-6"></a>        <span class="kw">sidebarPanel</span>(</span>
-<span id="cb50-7"><a href="bookmarking.html#cb50-7"></a>            <span class="kw">sliderInput</span>(<span class="st">&quot;frequency&quot;</span>, <span class="st">&quot;Frequency&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">1</span>, <span class="dt">value =</span> <span class="fl">0.01</span>),</span>
-<span id="cb50-8"><a href="bookmarking.html#cb50-8"></a>            <span class="kw">selectInput</span>(<span class="st">&quot;fractal&quot;</span>, <span class="st">&quot;Fractal&quot;</span>, <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;none&quot;</span>, <span class="st">&quot;fbm&quot;</span>, <span class="st">&quot;billow&quot;</span>, <span class="st">&quot;rigid-multi&quot;</span>)),</span>
-<span id="cb50-9"><a href="bookmarking.html#cb50-9"></a>            <span class="kw">sliderInput</span>(<span class="st">&quot;gain&quot;</span>, <span class="st">&quot;Gain&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">1</span>, <span class="dt">value =</span> <span class="fl">0.5</span>),</span>
-<span id="cb50-10"><a href="bookmarking.html#cb50-10"></a>        ),</span>
-<span id="cb50-11"><a href="bookmarking.html#cb50-11"></a>        <span class="kw">mainPanel</span>(</span>
-<span id="cb50-12"><a href="bookmarking.html#cb50-12"></a>           <span class="kw">plotOutput</span>(<span class="st">&quot;result&quot;</span>)</span>
-<span id="cb50-13"><a href="bookmarking.html#cb50-13"></a>        )</span>
-<span id="cb50-14"><a href="bookmarking.html#cb50-14"></a>    )</span>
-<span id="cb50-15"><a href="bookmarking.html#cb50-15"></a>)</span>
-<span id="cb50-16"><a href="bookmarking.html#cb50-16"></a></span>
-<span id="cb50-17"><a href="bookmarking.html#cb50-17"></a></span>
-<span id="cb50-18"><a href="bookmarking.html#cb50-18"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</span>
-<span id="cb50-19"><a href="bookmarking.html#cb50-19"></a></span>
-<span id="cb50-20"><a href="bookmarking.html#cb50-20"></a>    grid &lt;-<span class="st"> </span><span class="kw">long_grid</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dt">length.out =</span> <span class="dv">1000</span>), <span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dt">length.out =</span> <span class="dv">1000</span>))</span>
-<span id="cb50-21"><a href="bookmarking.html#cb50-21"></a></span>
-<span id="cb50-22"><a href="bookmarking.html#cb50-22"></a>    noise &lt;-<span class="st"> </span><span class="kw">reactive</span>({</span>
-<span id="cb50-23"><a href="bookmarking.html#cb50-23"></a>        ambient<span class="op">::</span><span class="kw">gen_simplex</span>(</span>
-<span id="cb50-24"><a href="bookmarking.html#cb50-24"></a>            <span class="dt">x =</span> grid<span class="op">$</span>x,</span>
-<span id="cb50-25"><a href="bookmarking.html#cb50-25"></a>            <span class="dt">y =</span> grid<span class="op">$</span>y,</span>
-<span id="cb50-26"><a href="bookmarking.html#cb50-26"></a>            <span class="dt">seed =</span> <span class="dv">42</span>,</span>
-<span id="cb50-27"><a href="bookmarking.html#cb50-27"></a>            <span class="dt">frequency =</span> input<span class="op">$</span>frequency,</span>
-<span id="cb50-28"><a href="bookmarking.html#cb50-28"></a>            <span class="dt">fractal =</span> input<span class="op">$</span>fractal,</span>
-<span id="cb50-29"><a href="bookmarking.html#cb50-29"></a>            <span class="dt">gain =</span> input<span class="op">$</span>gain</span>
-<span id="cb50-30"><a href="bookmarking.html#cb50-30"></a>        )</span>
-<span id="cb50-31"><a href="bookmarking.html#cb50-31"></a>    })</span>
-<span id="cb50-32"><a href="bookmarking.html#cb50-32"></a></span>
-<span id="cb50-33"><a href="bookmarking.html#cb50-33"></a>    output<span class="op">$</span>result &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</span>
-<span id="cb50-34"><a href="bookmarking.html#cb50-34"></a>        <span class="kw">plot</span>(grid, <span class="kw">noise</span>())</span>
-<span id="cb50-35"><a href="bookmarking.html#cb50-35"></a>    })</span>
-<span id="cb50-36"><a href="bookmarking.html#cb50-36"></a></span>
-<span id="cb50-37"><a href="bookmarking.html#cb50-37"></a>    <span class="kw">observe</span>({</span>
-<span id="cb50-38"><a href="bookmarking.html#cb50-38"></a>        <span class="kw">reactiveValuesToList</span>(input)</span>
-<span id="cb50-39"><a href="bookmarking.html#cb50-39"></a>        session<span class="op">$</span><span class="kw">doBookmark</span>()</span>
-<span id="cb50-40"><a href="bookmarking.html#cb50-40"></a>    })</span>
-<span id="cb50-41"><a href="bookmarking.html#cb50-41"></a>    <span class="kw">onBookmarked</span>(updateQueryString)</span>
-<span id="cb50-42"><a href="bookmarking.html#cb50-42"></a>}</span>
-<span id="cb50-43"><a href="bookmarking.html#cb50-43"></a></span>
-<span id="cb50-44"><a href="bookmarking.html#cb50-44"></a><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server, <span class="dt">enableBookmarking =</span> <span class="st">&quot;url&quot;</span>)</span></code></pre></div>
+<div class="solution">
+<h4 id="solution-38" class="unnumbered"><span id="unlabeled-div-39" class="solution"><em>Solution</em>. </span>Solution</h4>
+<p>For this example, we’ll use the bookmarking by setting <code>enableBookmarking = &quot;url&quot;</code> within the <code>shinyApp</code> function. In order to ensure the simulation is the same each time we re-render the bookmark we’ll create a grid to use for points then set the seed to <code>42</code> to ensure the same image is rendered when the bookmark is loaded.</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb53-2" data-line-number="2"><span class="kw">library</span>(ambient)</a>
+<a class="sourceLine" id="cb53-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb53-4" data-line-number="4">ui &lt;-<span class="st"> </span><span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb53-5" data-line-number="5">    <span class="kw">sidebarLayout</span>(</a>
+<a class="sourceLine" id="cb53-6" data-line-number="6">        <span class="kw">sidebarPanel</span>(</a>
+<a class="sourceLine" id="cb53-7" data-line-number="7">            <span class="kw">sliderInput</span>(<span class="st">&quot;frequency&quot;</span>, <span class="st">&quot;Frequency&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">1</span>, <span class="dt">value =</span> <span class="fl">0.01</span>),</a>
+<a class="sourceLine" id="cb53-8" data-line-number="8">            <span class="kw">selectInput</span>(<span class="st">&quot;fractal&quot;</span>, <span class="st">&quot;Fractal&quot;</span>, <span class="dt">choices =</span> <span class="kw">c</span>(<span class="st">&quot;none&quot;</span>, <span class="st">&quot;fbm&quot;</span>, <span class="st">&quot;billow&quot;</span>, <span class="st">&quot;rigid-multi&quot;</span>)),</a>
+<a class="sourceLine" id="cb53-9" data-line-number="9">            <span class="kw">sliderInput</span>(<span class="st">&quot;gain&quot;</span>, <span class="st">&quot;Gain&quot;</span>, <span class="dt">min =</span> <span class="dv">0</span>, <span class="dt">max =</span> <span class="dv">1</span>, <span class="dt">value =</span> <span class="fl">0.5</span>),</a>
+<a class="sourceLine" id="cb53-10" data-line-number="10">        ),</a>
+<a class="sourceLine" id="cb53-11" data-line-number="11">        <span class="kw">mainPanel</span>(</a>
+<a class="sourceLine" id="cb53-12" data-line-number="12">           <span class="kw">plotOutput</span>(<span class="st">&quot;result&quot;</span>)</a>
+<a class="sourceLine" id="cb53-13" data-line-number="13">        )</a>
+<a class="sourceLine" id="cb53-14" data-line-number="14">    )</a>
+<a class="sourceLine" id="cb53-15" data-line-number="15">)</a>
+<a class="sourceLine" id="cb53-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb53-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb53-18" data-line-number="18">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output, session) {</a>
+<a class="sourceLine" id="cb53-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb53-20" data-line-number="20">    grid &lt;-<span class="st"> </span><span class="kw">long_grid</span>(<span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dt">length.out =</span> <span class="dv">1000</span>), <span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">10</span>, <span class="dt">length.out =</span> <span class="dv">1000</span>))</a>
+<a class="sourceLine" id="cb53-21" data-line-number="21"></a>
+<a class="sourceLine" id="cb53-22" data-line-number="22">    noise &lt;-<span class="st"> </span><span class="kw">reactive</span>({</a>
+<a class="sourceLine" id="cb53-23" data-line-number="23">        ambient<span class="op">::</span><span class="kw">gen_simplex</span>(</a>
+<a class="sourceLine" id="cb53-24" data-line-number="24">            <span class="dt">x =</span> grid<span class="op">$</span>x,</a>
+<a class="sourceLine" id="cb53-25" data-line-number="25">            <span class="dt">y =</span> grid<span class="op">$</span>y,</a>
+<a class="sourceLine" id="cb53-26" data-line-number="26">            <span class="dt">seed =</span> <span class="dv">42</span>,</a>
+<a class="sourceLine" id="cb53-27" data-line-number="27">            <span class="dt">frequency =</span> input<span class="op">$</span>frequency,</a>
+<a class="sourceLine" id="cb53-28" data-line-number="28">            <span class="dt">fractal =</span> input<span class="op">$</span>fractal,</a>
+<a class="sourceLine" id="cb53-29" data-line-number="29">            <span class="dt">gain =</span> input<span class="op">$</span>gain</a>
+<a class="sourceLine" id="cb53-30" data-line-number="30">        )</a>
+<a class="sourceLine" id="cb53-31" data-line-number="31">    })</a>
+<a class="sourceLine" id="cb53-32" data-line-number="32"></a>
+<a class="sourceLine" id="cb53-33" data-line-number="33">    output<span class="op">$</span>result &lt;-<span class="st"> </span><span class="kw">renderPlot</span>({</a>
+<a class="sourceLine" id="cb53-34" data-line-number="34">        <span class="kw">plot</span>(grid, <span class="kw">noise</span>())</a>
+<a class="sourceLine" id="cb53-35" data-line-number="35">    })</a>
+<a class="sourceLine" id="cb53-36" data-line-number="36"></a>
+<a class="sourceLine" id="cb53-37" data-line-number="37">    <span class="kw">observe</span>({</a>
+<a class="sourceLine" id="cb53-38" data-line-number="38">        <span class="kw">reactiveValuesToList</span>(input)</a>
+<a class="sourceLine" id="cb53-39" data-line-number="39">        session<span class="op">$</span><span class="kw">doBookmark</span>()</a>
+<a class="sourceLine" id="cb53-40" data-line-number="40">    })</a>
+<a class="sourceLine" id="cb53-41" data-line-number="41">    <span class="kw">onBookmarked</span>(updateQueryString)</a>
+<a class="sourceLine" id="cb53-42" data-line-number="42">}</a>
+<a class="sourceLine" id="cb53-43" data-line-number="43"></a>
+<a class="sourceLine" id="cb53-44" data-line-number="44"><span class="kw">shinyApp</span>(<span class="dt">ui =</span> ui, <span class="dt">server =</span> server, <span class="dt">enableBookmarking =</span> <span class="st">&quot;url&quot;</span>)</a></code></pre></div>
 </div>
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------->
 </div>
-<div id="exercise-11.3.2" class="section level3 unnumbered" number="">
+<div id="exercise-11.3.2" class="section level3 unnumbered">
 <h3>Exercise 11.3.2</h3>
 <p>Make a simple app that lets you upload a csv file and then bookmark it. Upload a few files and then look in shiny_bookmarks. How do the files correspond to the bookmarks? (Hint: you can use readRDS() to look inside the cache files that Shiny is generating).</p>
-<div id="solution-1" class="section level4 unnumbered solution" number="">
-<h4>Solution</h4>
+<div class="solution">
+<h4 id="solution-39" class="unnumbered"><span id="unlabeled-div-40" class="solution"><em>Solution</em>. </span>Solution</h4>
 <p>By setting the <code>state$values$data</code> equal to the <code>data</code> reactive, we can store the contents of the uploaded <code>csv</code>. Looking in the <code>shiny_bookmarks</code> folder we see an <code>input.rds</code> which has the same 4 arguments as <code>input$file</code>:</p>
 <ol style="list-style-type: decimal">
 <li><code>name</code></li>
@@ -336,47 +323,47 @@ This chapter is in development...
 <li><code>datapath</code></li>
 </ol>
 <p>All of these except the <code>datapath</code> are the same as when we upload the file; rather than the temporary location the file is saved to within the shiny session, the datapath becomes <code>0.csv</code>, a csv file created within the same folder are our <code>input.RDS</code>.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="bookmarking.html#cb51-1"></a><span class="kw">library</span>(shiny)</span>
-<span id="cb51-2"><a href="bookmarking.html#cb51-2"></a></span>
-<span id="cb51-3"><a href="bookmarking.html#cb51-3"></a>ui &lt;-<span class="st"> </span><span class="cf">function</span>(request){</span>
-<span id="cb51-4"><a href="bookmarking.html#cb51-4"></a>    <span class="kw">fluidPage</span>(</span>
-<span id="cb51-5"><a href="bookmarking.html#cb51-5"></a>        <span class="kw">sidebarLayout</span>(</span>
-<span id="cb51-6"><a href="bookmarking.html#cb51-6"></a>            <span class="kw">sidebarPanel</span>(</span>
-<span id="cb51-7"><a href="bookmarking.html#cb51-7"></a>                <span class="kw">bookmarkButton</span>(),</span>
-<span id="cb51-8"><a href="bookmarking.html#cb51-8"></a>                <span class="kw">fileInput</span>(<span class="st">&quot;file&quot;</span>, <span class="st">&quot;Choose CSV File&quot;</span>, <span class="dt">multiple =</span> <span class="ot">TRUE</span>,<span class="dt">accept =</span> <span class="st">&quot;.csv&quot;</span>)</span>
-<span id="cb51-9"><a href="bookmarking.html#cb51-9"></a>                ),</span>
-<span id="cb51-10"><a href="bookmarking.html#cb51-10"></a>            <span class="kw">mainPanel</span>(</span>
-<span id="cb51-11"><a href="bookmarking.html#cb51-11"></a>                <span class="kw">tableOutput</span>(<span class="st">&quot;contents&quot;</span>)</span>
-<span id="cb51-12"><a href="bookmarking.html#cb51-12"></a>            )</span>
-<span id="cb51-13"><a href="bookmarking.html#cb51-13"></a>        )</span>
-<span id="cb51-14"><a href="bookmarking.html#cb51-14"></a>    )</span>
-<span id="cb51-15"><a href="bookmarking.html#cb51-15"></a>}</span>
-<span id="cb51-16"><a href="bookmarking.html#cb51-16"></a></span>
-<span id="cb51-17"><a href="bookmarking.html#cb51-17"></a></span>
-<span id="cb51-18"><a href="bookmarking.html#cb51-18"></a>server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output) {</span>
-<span id="cb51-19"><a href="bookmarking.html#cb51-19"></a></span>
-<span id="cb51-20"><a href="bookmarking.html#cb51-20"></a>    <span class="co"># create reactive of input file</span></span>
-<span id="cb51-21"><a href="bookmarking.html#cb51-21"></a>    data &lt;-<span class="st"> </span><span class="kw">reactive</span>({</span>
-<span id="cb51-22"><a href="bookmarking.html#cb51-22"></a>        <span class="kw">req</span>(input<span class="op">$</span>file)</span>
-<span id="cb51-23"><a href="bookmarking.html#cb51-23"></a>        <span class="kw">read.csv</span>(input<span class="op">$</span>file<span class="op">$</span>datapath)</span>
-<span id="cb51-24"><a href="bookmarking.html#cb51-24"></a>    })</span>
-<span id="cb51-25"><a href="bookmarking.html#cb51-25"></a></span>
-<span id="cb51-26"><a href="bookmarking.html#cb51-26"></a>    <span class="co"># display head</span></span>
-<span id="cb51-27"><a href="bookmarking.html#cb51-27"></a>    output<span class="op">$</span>contents &lt;-<span class="st"> </span><span class="kw">renderTable</span>( <span class="kw">head</span>(<span class="kw">data</span>()) )</span>
-<span id="cb51-28"><a href="bookmarking.html#cb51-28"></a></span>
-<span id="cb51-29"><a href="bookmarking.html#cb51-29"></a>    <span class="co"># set the state to the df reactive</span></span>
-<span id="cb51-30"><a href="bookmarking.html#cb51-30"></a>    <span class="kw">onBookmark</span>(<span class="cf">function</span>(state){</span>
-<span id="cb51-31"><a href="bookmarking.html#cb51-31"></a>        state<span class="op">$</span>values<span class="op">$</span>data &lt;-<span class="st"> </span><span class="kw">data</span>()</span>
-<span id="cb51-32"><a href="bookmarking.html#cb51-32"></a>    })</span>
-<span id="cb51-33"><a href="bookmarking.html#cb51-33"></a></span>
-<span id="cb51-34"><a href="bookmarking.html#cb51-34"></a>    <span class="co"># on restore set df to the state</span></span>
-<span id="cb51-35"><a href="bookmarking.html#cb51-35"></a>    <span class="kw">onRestore</span>(<span class="cf">function</span>(state){</span>
-<span id="cb51-36"><a href="bookmarking.html#cb51-36"></a>        data &lt;-<span class="st"> </span><span class="kw">reactive</span>(state<span class="op">$</span>values<span class="op">$</span>data)</span>
-<span id="cb51-37"><a href="bookmarking.html#cb51-37"></a>    })</span>
-<span id="cb51-38"><a href="bookmarking.html#cb51-38"></a>    <span class="kw">enableBookmarking</span>(<span class="dt">store=</span><span class="st">&quot;server&quot;</span>)</span>
-<span id="cb51-39"><a href="bookmarking.html#cb51-39"></a>}</span>
-<span id="cb51-40"><a href="bookmarking.html#cb51-40"></a></span>
-<span id="cb51-41"><a href="bookmarking.html#cb51-41"></a><span class="kw">shinyApp</span>(ui, server)</span></code></pre></div>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" data-line-number="1"><span class="kw">library</span>(shiny)</a>
+<a class="sourceLine" id="cb54-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb54-3" data-line-number="3">ui &lt;-<span class="st"> </span><span class="cf">function</span>(request){</a>
+<a class="sourceLine" id="cb54-4" data-line-number="4">    <span class="kw">fluidPage</span>(</a>
+<a class="sourceLine" id="cb54-5" data-line-number="5">        <span class="kw">sidebarLayout</span>(</a>
+<a class="sourceLine" id="cb54-6" data-line-number="6">            <span class="kw">sidebarPanel</span>(</a>
+<a class="sourceLine" id="cb54-7" data-line-number="7">                <span class="kw">bookmarkButton</span>(),</a>
+<a class="sourceLine" id="cb54-8" data-line-number="8">                <span class="kw">fileInput</span>(<span class="st">&quot;file&quot;</span>, <span class="st">&quot;Choose CSV File&quot;</span>, <span class="dt">multiple =</span> <span class="ot">TRUE</span>,<span class="dt">accept =</span> <span class="st">&quot;.csv&quot;</span>)</a>
+<a class="sourceLine" id="cb54-9" data-line-number="9">                ),</a>
+<a class="sourceLine" id="cb54-10" data-line-number="10">            <span class="kw">mainPanel</span>(</a>
+<a class="sourceLine" id="cb54-11" data-line-number="11">                <span class="kw">tableOutput</span>(<span class="st">&quot;contents&quot;</span>)</a>
+<a class="sourceLine" id="cb54-12" data-line-number="12">            )</a>
+<a class="sourceLine" id="cb54-13" data-line-number="13">        )</a>
+<a class="sourceLine" id="cb54-14" data-line-number="14">    )</a>
+<a class="sourceLine" id="cb54-15" data-line-number="15">}</a>
+<a class="sourceLine" id="cb54-16" data-line-number="16"></a>
+<a class="sourceLine" id="cb54-17" data-line-number="17"></a>
+<a class="sourceLine" id="cb54-18" data-line-number="18">server &lt;-<span class="st"> </span><span class="cf">function</span>(input, output) {</a>
+<a class="sourceLine" id="cb54-19" data-line-number="19"></a>
+<a class="sourceLine" id="cb54-20" data-line-number="20">    <span class="co"># create reactive of input file</span></a>
+<a class="sourceLine" id="cb54-21" data-line-number="21">    data &lt;-<span class="st"> </span><span class="kw">reactive</span>({</a>
+<a class="sourceLine" id="cb54-22" data-line-number="22">        <span class="kw">req</span>(input<span class="op">$</span>file)</a>
+<a class="sourceLine" id="cb54-23" data-line-number="23">        <span class="kw">read.csv</span>(input<span class="op">$</span>file<span class="op">$</span>datapath)</a>
+<a class="sourceLine" id="cb54-24" data-line-number="24">    })</a>
+<a class="sourceLine" id="cb54-25" data-line-number="25"></a>
+<a class="sourceLine" id="cb54-26" data-line-number="26">    <span class="co"># display head</span></a>
+<a class="sourceLine" id="cb54-27" data-line-number="27">    output<span class="op">$</span>contents &lt;-<span class="st"> </span><span class="kw">renderTable</span>( <span class="kw">head</span>(<span class="kw">data</span>()) )</a>
+<a class="sourceLine" id="cb54-28" data-line-number="28"></a>
+<a class="sourceLine" id="cb54-29" data-line-number="29">    <span class="co"># set the state to the df reactive</span></a>
+<a class="sourceLine" id="cb54-30" data-line-number="30">    <span class="kw">onBookmark</span>(<span class="cf">function</span>(state){</a>
+<a class="sourceLine" id="cb54-31" data-line-number="31">        state<span class="op">$</span>values<span class="op">$</span>data &lt;-<span class="st"> </span><span class="kw">data</span>()</a>
+<a class="sourceLine" id="cb54-32" data-line-number="32">    })</a>
+<a class="sourceLine" id="cb54-33" data-line-number="33"></a>
+<a class="sourceLine" id="cb54-34" data-line-number="34">    <span class="co"># on restore set df to the state</span></a>
+<a class="sourceLine" id="cb54-35" data-line-number="35">    <span class="kw">onRestore</span>(<span class="cf">function</span>(state){</a>
+<a class="sourceLine" id="cb54-36" data-line-number="36">        data &lt;-<span class="st"> </span><span class="kw">reactive</span>(state<span class="op">$</span>values<span class="op">$</span>data)</a>
+<a class="sourceLine" id="cb54-37" data-line-number="37">    })</a>
+<a class="sourceLine" id="cb54-38" data-line-number="38">    <span class="kw">enableBookmarking</span>(<span class="dt">store=</span><span class="st">&quot;server&quot;</span>)</a>
+<a class="sourceLine" id="cb54-39" data-line-number="39">}</a>
+<a class="sourceLine" id="cb54-40" data-line-number="40"></a>
+<a class="sourceLine" id="cb54-41" data-line-number="41"><span class="kw">shinyApp</span>(ui, server)</a></code></pre></div>
 </div>
 
 </div>

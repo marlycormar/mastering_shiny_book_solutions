@@ -81,12 +81,41 @@ depends on both `c()` and `input$d`.
 
 ### Exercise 4.3.6.2 {-}
 
-Can the reactive graph contain a cycle? Why/why not?
+Why will this code fail?
+
+
+```r
+var <- reactive(df[input$var])
+range <- reactive(range(var(), na.rm = TRUE))
+```
+
+Why is `var()` a bad name for a reactive?
 
 :::solution
 #### Solution {-}
 
-No! This will create circular references and a recursion loop!
+This code doesn't work because we called our reactive `range`, so when we call the `range` function we're actually calling our new reactive. If we change the name of the reactive from `range` to `col_range` then the code will work. Similarly, `var()` is not a good name for a reactive because it's already a function to compute the variance of `x`! `?cor::var`
+
+
+```r
+library(shiny)
+
+df <- mtcars
+
+ui <- fluidPage(
+    selectInput("var", NULL, choices = colnames(df)),
+    verbatimTextOutput("debug")
+)
+
+server <- function(input, output, session) {
+    col_var <- reactive( df[input$var] )
+    col_range <- reactive({ range(col_var(), na.rm = TRUE ) })
+    output$debug <- renderPrint({ col_range() })
+
+}
+
+shinyApp(ui = ui, server = server)
+```
 
 :::
 
