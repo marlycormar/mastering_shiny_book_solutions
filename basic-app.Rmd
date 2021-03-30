@@ -224,8 +224,10 @@ However there are three bugs in the code provided below. Can you find and fix
 them?
 
 ```{r eval=FALSE}
+library(shiny)
 library(ggplot2)
-datasets <- data(package = "ggplot2")$results[c(2, 4, 10), "Item"]
+
+datasets <- c("economics", "faithfuld", "seals")
 
 ui <- fluidPage(
   selectInput("dataset", "Dataset", choices = datasets),
@@ -259,8 +261,10 @@ The app contains the following three bugs:
 The fixed app looks as follows:
 
 ```{r eval=FALSE}
+library(shiny)
 library(ggplot2)
-datasets <- data(package = "ggplot2")$results[c(2, 4, 10), "Item"]
+
+datasets <- c("economics", "faithfuld", "seals")
 
 ui <- fluidPage(
   selectInput("dataset", "Dataset", choices = datasets),
